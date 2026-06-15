@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05060e" />
+
+  <title>Fractalogie — Erkenne das Muster unter deinem Leben</title>
+  <meta name="description" content="Fractalogie ist eine KI-geführte App zur Selbstreflexion für iOS. Beschreibe eine wiederkehrende Situation und sieh, wie die verborgene Schleife auftaucht, die dein Leben ordnet — ihr Auslöser, ihre Reaktion, das Gefühl und der Preis." />
+  <meta name="keywords" content="App zur Selbstreflexion, KI-Journaling, wiederkehrende Muster, Schattenarbeit, Introspektions-App, persönliches Wachstum, fractalogie, Identitätsmuster" />
+  <link rel="canonical" href="https://fractalogie.ai/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/" />
+  <link rel="alternate" hreflang="en" href="https://fractalogie.ai/" />
+  <link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/" />
+  <link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/" />
+  <link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fractalogie.ai/" />
+  <meta property="og:title" content="Fractalogie — Erkenne das Muster unter deinem Leben" />
+  <meta property="og:description" content="Eine KI-geführte App zur Selbstreflexion. Bring die eine wiederkehrende Schleife ans Licht, die dein Leben still und leise ordnet." />
+  <meta property="og:image" content="https://fractalogie.ai/logo-mark.png" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractalogie — Erkenne das Muster unter deinem Leben" />
+  <meta name="twitter:description" content="Eine KI-geführte App zur Selbstreflexion. Bring die eine wiederkehrende Schleife ans Licht, die dein Leben still und leise ordnet." />
+  <meta name="twitter:image" content="https://fractalogie.ai/logo-mark.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fractalogie",
+    "description": "An AI-guided self-reflection app that surfaces the recurring loop organising your life.",
+    "url": "https://fractalogie.ai",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "One free scan, then optional Founding Access subscription" },
+    "inLanguage": ["en", "fr", "es", "de"]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="/de/"><img src="/logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="#how">So funktioniert's</a>
+        <a href="#features">Funktionen</a>
+        <a href="#pricing">Preise</a>
+        <a href="#faq">FAQ</a>
+        <details class="lang">
+          <summary>DE ▾</summary>
+          <ul>
+            <li><a href="/">English</a></li>
+            <li><a href="/fr/">Français</a></li>
+            <li><a href="/es/">Español</a></li>
+            <li><a href="/de/">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="mailto:contact@fractalogie.ai?subject=Benachrichtige%20mich%20zum%20Start%20von%20Fractalogie">Benachrichtigen lassen</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menü">☰</button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="pill reveal"><span class="dot"></span> Demnächst · iOS</span>
+      <h1 class="reveal" data-d="1">Erkenne das <span class="grad italic">Muster</span> unter deinem Leben</h1>
+      <p class="sub reveal" data-d="2">Fractalogie ist ein KI-geführter Spiegel. Beschreibe eine Situation, die sich immer wieder wiederholt — und sieh zu, wie die verborgene Schleife darunter auftaucht: ihr Auslöser, ihre Reaktion, das Gefühl, das sie schützt, und der Preis, den du zahlst.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn btn-primary" href="mailto:contact@fractalogie.ai?subject=Benachrichtige%20mich%20zum%20Start%20von%20Fractalogie">Zum Start benachrichtigen lassen</a>
+        <a class="btn btn-ghost" href="#how">So funktioniert's</a>
+      </div>
+
+      <div class="fractal-stage reveal" data-d="3" aria-hidden="true">
+        <svg viewBox="-100 -100 200 200" role="presentation">
+          <circle class="glow" cx="0" cy="0" r="46" fill="#e6b664" />
+          <g class="ring r1">
+            <circle cx="0" cy="0" r="78" fill="none" stroke="rgba(230,182,100,0.25)" stroke-width="0.6" />
+            <g class="fractal-branch" stroke-width="1.1">
+              <!-- 6 radial recursive branches -->
+              <g transform="rotate(0)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+              <g transform="rotate(60)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+              <g transform="rotate(120)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+              <g transform="rotate(180)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+              <g transform="rotate(240)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+              <g transform="rotate(300)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
+            </g>
+          </g>
+          <g class="ring r2">
+            <circle cx="0" cy="0" r="92" fill="none" stroke="rgba(168,123,255,0.2)" stroke-width="0.5" stroke-dasharray="2 6" />
+          </g>
+          <circle cx="0" cy="0" r="4" fill="#f0cf95" />
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── How it works ─────────────────────────────────────────────────── -->
+  <section id="how">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Der Scan</span>
+        <h2>Vier Schritte, eine Schleife</h2>
+        <p>Ein Scan dauert nur ein paar Minuten. Du füllst keine Formulare aus — du führst ein kurzes, präzises Gespräch mit einem Spiegel, der immer nur einem Faden folgt.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><h3>Benenne es</h3><p>Wähle eine Situation, die sich immer wieder ereignet und dich still und leise zurückhält.</p></div>
+        <div class="step reveal" data-d="1"><div class="num">02</div><h3>Beschreibe einmal</h3><p>Erzähl von einem konkreten Moment, in dem es passiert ist — mit deinen eigenen Worten.</p></div>
+        <div class="step reveal" data-d="2"><div class="num">03</div><h3>Lass dich spiegeln</h3><p>Eine Live-KI stellt eine präzise Frage nach der anderen und bringt Auslöser, Reaktion, Gefühl und Preis ans Licht.</p></div>
+        <div class="step reveal" data-d="3"><div class="num">04</div><h3>Sieh die Struktur</h3><p>Deine Schleife kristallisiert sich zu einem einzigen Motiv — und der verborgenen Logik, die sie am Laufen hält.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────────────────── -->
+  <section id="features">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Was du bekommst</span>
+        <h2>Ein Spiegel, kein Ratgeber</h2>
+        <p>Fractalogie sagt dir nicht, was du tun sollst. Es enthüllt die Architektur, die du bereits lebst — damit das Bewusstsein den Rest erledigen kann.</p>
+      </div>
+      <div class="features">
+        <div class="feature reveal"><div class="ic">◇</div><h3>Das fraktale Motiv</h3><p>„Wenn ___, dann ___, weil ich ___ fühle, und das führt zu ___.“ Ein Satz, der die Schleife hinter dem Lärm benennt.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⟳</div><h3>Verborgene Logik &amp; Umkehrung</h3><p>Was das Muster schützt, was es kostet und die destabilisierende Umkehrung, die seinen Griff lockert.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">✦</div><h3>Deine persönliche Karte</h3><p>Speichere Motive und Erkenntnisse auf einer lebendigen Karte deiner Struktur, die mit jedem Scan wächst.</p></div>
+        <div class="feature reveal"><div class="ic">∞</div><h3>Unbegrenzte Scans</h3><p>Mit Founding Access entschlüsselst du so viele Schleifen, wie du magst — in Beziehungen, Geld, Arbeit und Körper.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⌖</div><h3>Privat von Grund auf</h3><p>Keine Werbung, keine Tracker, keine Datenhändler. Nutze die App ohne Konto; lösche alles mit einem Fingertipp.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">⟡</div><h3>Deins, überall</h3><p>Melde dich an, um deine Scans sicher zwischen Geräten zu synchronisieren. Verfügbar auf Englisch, Französisch, Spanisch und Deutsch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Beyond ───────────────────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Über die App hinaus</span>
+        <h2>Wenn Sehen nicht genug ist</h2>
+        <p>Die App enthüllt die Struktur. Eine private 1:1-Rekonstruktion ist der Ort, an dem du sie neu ordnest — an der Wurzel. Bewirb dich, wenn eine Schleife sich immer wieder wiederholt und du bereit bist, die Identität zu verändern, die sie erzeugt.</p>
+        <a class="btn btn-ghost" href="mailto:contact@fractalogie.ai?subject=Identit%C3%A4tsrekonstruktion">Privates Gespräch anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ──────────────────────────────────────────────────────── -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Preise</span>
+        <h2>Kostenlos starten</h2>
+        <p>Dein erster Scan geht auf uns. Founding Access schaltet das volle Erlebnis frei.</p>
+      </div>
+      <div class="price-grid">
+        <div class="plan reveal">
+          <span class="tag">Kostenlos</span>
+          <div class="amt">€0</div>
+          <ul>
+            <li>Ein vollständiger Scan</li>
+            <li>Dein erstes fraktales Motiv</li>
+            <li>Kein Konto erforderlich</li>
+          </ul>
+        </div>
+        <div class="plan featured reveal" data-d="1">
+          <span class="tag">Founding Access · monatlich</span>
+          <div class="amt">—<small> / Monat</small></div>
+          <ul>
+            <li>Unbegrenzte fraktale Scans</li>
+            <li>Vollständige persönliche Karte &amp; Verlauf</li>
+            <li>Cloud-Synchronisierung zwischen Geräten</li>
+            <li>Jederzeit in den App-Store-Einstellungen kündbar</li>
+          </ul>
+        </div>
+      </div>
+      <p class="center" style="margin-top:22px;color:var(--ink-30);font-size:13px;">Der genaue Preis wird vor dem Kauf in der App angezeigt, in deiner lokalen Währung. Abonnements verlängern sich automatisch bis zur Kündigung.</p>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="shead reveal"><span class="eyebrow">Fragen</span><h2>Gut zu wissen</h2></div>
+      <div class="faq reveal">
+        <details class="qa"><summary>Ist Fractalogie eine Therapie?<span class="chev">＋</span></summary><div class="a">Nein. Fractalogie ist ein Werkzeug zur Selbstreflexion — keine Therapie, keine medizinische Versorgung und keine Behandlung psychischer Erkrankungen. Es diagnostiziert und behandelt nichts und ersetzt keine qualifizierte Fachkraft. Wenn es dir nicht gut geht, wende dich bitte an eine Fachperson oder deine lokale Notrufnummer.</div></details>
+        <details class="qa"><summary>Was passiert mit dem, was ich schreibe?<span class="chev">＋</span></summary><div class="a">Dein Scan-Text wird sicher an die API von OpenAI gesendet, um deine Analyse zu erstellen, und wird niemals zum Training von Modellen verwendet. Ohne Konto bleibt er auf deinem Gerät; mit Konto wird er privat gespeichert (Supabase), damit er zwischen Geräten synchronisiert wird. Wir verkaufen nichts und betreiben kein Tracking. Siehe unsere <a href="/de/privacy">Datenschutzerklärung</a>.</div></details>
+        <details class="qa"><summary>Brauche ich ein Konto?<span class="chev">＋</span></summary><div class="a">Nein. Der Kern der App funktioniert ohne Konto. Die Anmeldung (Apple oder Google) ermöglicht lediglich die Cloud-Synchronisierung. Du kannst dein Konto und alle Cloud-Daten mit einem Fingertipp in der App löschen.</div></details>
+        <details class="qa"><summary>Welche Plattformen und Sprachen?<span class="chev">＋</span></summary><div class="a">Fractalogie ist eine iOS-App, verfügbar auf Englisch, Französisch, Spanisch und Deutsch. Die Oberfläche und jede Analyse folgen deiner gewählten Sprache.</div></details>
+        <details class="qa"><summary>Wie funktioniert die Abrechnung?<span class="chev">＋</span></summary><div class="a">Dein erster Scan ist kostenlos. Founding Access ist ein monatliches, automatisch verlängertes Abonnement, das über Apple erworben wird; der Preis wird vor dem Kauf angezeigt. Es verlängert sich, sofern es nicht mindestens 24 Stunden vor Ablauf des Zeitraums gekündigt wird — verwalte es jederzeit in deinen App-Store-Einstellungen.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Disclaimer ───────────────────────────────────────────────────── -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="disclaimer reveal">
+        <p>Fractalogie dient ausschließlich der Selbstreflexion. Es ist keine medizinische, psychologische oder professionelle Beratung und kein Krisendienst. Wenn du in Gefahr sein könntest, wende dich an deine lokale Notrufnummer (112 in der EU, 988 in den USA) oder an eine qualifizierte Fachperson.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────── -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="/de/"><img src="/logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">Ein KI-geführter Spiegel für die Muster, die dein Leben still und leise ordnen.</p>
+        </div>
+        <div class="fcol">
+          <h4>Produkt</h4>
+          <a href="#how">So funktioniert's</a>
+          <a href="#features">Funktionen</a>
+          <a href="#pricing">Preise</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="fcol">
+          <h4>Rechtliches</h4>
+          <a href="/de/privacy">Datenschutzerklärung</a>
+          <a href="/de/terms">Nutzungsbedingungen</a>
+          <a href="/de/support">Support</a>
+        </div>
+        <div class="fcol">
+          <h4>Kontakt</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="/de/support">Hilfe &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. Alle Rechte vorbehalten.</span>
+        <span>Mit Sorgfalt gemacht · iOS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
