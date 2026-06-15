@@ -180,6 +180,7 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .plan .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 .plan .amt { font-family: 'Fraunces', serif; font-size: 52px; margin: 14px 0 4px; }
 .plan .amt small { font-size: 16px; color: var(--ink-50); font-family: 'Space Grotesk', sans-serif; }
+.plan .amt-note { color: var(--ink-50); font-size: 13px; margin-top: -2px; }
 .plan ul { list-style: none; margin: 22px 0 0; display: grid; gap: 11px; }
 .plan li { font-size: 14px; color: var(--ink-70); padding-left: 24px; position: relative; }
 .plan li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 4px; }
