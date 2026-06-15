@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#05060e" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
 
   <title>Fractalogie — See the pattern beneath your life</title>
-  <meta name="description" content="Fractalogie is an AI-guided self-reflection app for iOS. Describe one recurring situation and watch the hidden loop organising your life surface — its trigger, reaction, emotion and price." />
-  <meta name="keywords" content="self-reflection app, AI journaling, recurring patterns, shadow work, introspection app, personal growth, fractalogie, identity patterns" />
+  <meta name="description" content="Fractalogie is an AI-guided self-reflection app for iOS. Describe one recurring situation and watch the hidden loop running your life surface — its trigger, reaction, emotion and the price you pay." />
+  <meta name="keywords" content="self-reflection app, AI journaling, recurring patterns, introspection, personal growth, fractalogie, identity patterns, mindfulness" />
   <link rel="canonical" href="https://fractalogie.ai/" />
-  <link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/" />
-  <link rel="alternate" hreflang="en" href="https://fractalogie.ai/" />
-  <link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/" />
-  <link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/" />
-  <link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://fractalogie.ai/" />
   <meta property="og:title" content="Fractalogie — See the pattern beneath your life" />
-  <meta property="og:description" content="An AI-guided self-reflection app. Surface the one recurring loop that quietly organises your life." />
-  <meta property="og:image" content="https://fractalogie.ai/logo-mark.png" />
+  <meta property="og:description" content="An AI-guided mirror. Surface the one recurring loop that quietly organises your life." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
   <meta property="og:site_name" content="Fractalogie" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fractalogie — See the pattern beneath your life" />
-  <meta name="twitter:description" content="An AI-guided self-reflection app. Surface the one recurring loop that quietly organises your life." />
-  <meta name="twitter:image" content="https://fractalogie.ai/logo-mark.png" />
+  <meta name="twitter:description" content="An AI-guided mirror. Surface the one recurring loop that quietly organises your life." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="logo-mark.png" />
@@ -34,88 +29,94 @@
   <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Fractalogie",
-    "description": "An AI-guided self-reflection app that surfaces the recurring loop organising your life.",
-    "url": "https://fractalogie.ai",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "iOS",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "One free scan, then optional Founding Access subscription" },
-    "inLanguage": ["en", "fr", "es", "de"]
-  }
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fractalogie","description":"An AI-guided self-reflection app that surfaces the recurring loop organising your life.","url":"https://fractalogie.ai","applicationCategory":"LifestyleApplication","operatingSystem":"iOS","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":["en","fr","es","de"]}
   </script>
 </head>
 <body>
   <div class="bg"></div>
   <canvas id="stars"></canvas>
+  <div class="grain"></div>
 
   <nav>
     <div class="wrap">
       <a class="brand" href="index.html"><img src="logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
       <div class="nav-links">
-        <a href="#how">How it works</a>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <details class="lang">
-          <summary>EN ▾</summary>
-          <ul>
-            <li><a href="index.html">English</a></li>
-            <li><a href="fr/index.html">Français</a></li>
-            <li><a href="es/index.html">Español</a></li>
-            <li><a href="de/index.html">Deutsch</a></li>
-          </ul>
-        </details>
-        <a class="nav-cta" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20when%20Fractalogie%20launches">Get notified</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="features.html">Features</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="nav-cta" href="#get">Get the app</a>
       </div>
       <button class="nav-toggle" aria-label="Menu">☰</button>
     </div>
   </nav>
 
-  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <!-- ═══ HERO ═══ -->
   <header class="hero">
     <div class="wrap">
-      <span class="pill reveal"><span class="dot"></span> Coming soon · iOS</span>
-      <h1 class="reveal" data-d="1">See the <span class="grad italic">pattern</span> beneath your life</h1>
-      <p class="sub reveal" data-d="2">Fractalogie is an AI-guided mirror. Describe one situation that keeps repeating — and watch the hidden loop underneath it surface: its trigger, its reaction, the emotion it protects, and the price you pay.</p>
-      <div class="hero-cta reveal" data-d="3">
-        <a class="btn btn-primary" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20when%20Fractalogie%20launches">Get notified at launch</a>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
-      </div>
+      <div class="hero-grid">
+        <div>
+          <span class="pill reveal"><span class="dot"></span> Coming soon · iOS</span>
+          <h1 class="reveal" data-d="1">See the <span class="grad italic">pattern</span> beneath your life</h1>
+          <p class="sub reveal" data-d="2">Fractalogie is an AI-guided mirror. Name one situation that keeps repeating, describe a single moment of it — and watch the hidden loop underneath surface: its trigger, your reaction, the emotion it protects, and the price you keep paying.</p>
+          <div class="badges reveal" data-d="3">
+            <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20iOS">
+              <span class="soon">Soon</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+              <span class="st"><small>Coming soon to the</small><b>App Store</b></span>
+            </a>
+            <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20Android">
+              <span class="soon">Soon</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+              <span class="st"><small>In construction for</small><b>Google Play</b></span>
+            </a>
+          </div>
+          <p class="hero-note reveal" data-d="4">No account needed · text only · no tracking</p>
+        </div>
 
-      <div class="fractal-stage reveal" data-d="3" aria-hidden="true">
-        <svg viewBox="-100 -100 200 200" role="presentation">
-          <circle class="glow" cx="0" cy="0" r="46" fill="#e6b664" />
-          <g class="ring r1">
-            <circle cx="0" cy="0" r="78" fill="none" stroke="rgba(230,182,100,0.25)" stroke-width="0.6" />
-            <g class="fractal-branch" stroke-width="1.1">
-              <!-- 6 radial recursive branches -->
-              <g transform="rotate(0)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-              <g transform="rotate(60)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-              <g transform="rotate(120)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-              <g transform="rotate(180)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-              <g transform="rotate(240)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-              <g transform="rotate(300)"><path d="M0 0 L0 -70 M0 -44 L-16 -60 M0 -44 L16 -60 M0 -58 L-9 -68 M0 -58 L9 -68" /></g>
-            </g>
-          </g>
-          <g class="ring r2">
-            <circle cx="0" cy="0" r="92" fill="none" stroke="rgba(168,123,255,0.2)" stroke-width="0.5" stroke-dasharray="2 6" />
-          </g>
-          <circle cx="0" cy="0" r="4" fill="#f0cf95" />
-        </svg>
+        <div class="hero-device reveal" data-d="2">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/01-hero.jpg" alt="Fractalogie app" loading="eager" />
+          </div>
+          <div class="float-tag ft-1"><span class="k">◆</span> trigger → reaction</div>
+          <div class="float-tag ft-2"><span class="k">✦</span> one loop, revealed</div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- ── How it works ─────────────────────────────────────────────────── -->
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>the same argument</span><span>the same exit</span><span>the same silence</span><span>the same fear</span><span>the same loop</span><span>the same price</span>
+      <span>the same argument</span><span>the same exit</span><span>the same silence</span><span>the same fear</span><span>the same loop</span><span>the same price</span>
+    </div>
+  </div>
+
+  <!-- ═══ PROBLEM ═══ -->
+  <section id="problem">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">The premise</span>
+        <h2>You keep ending up in the <span class="grad">same place</span></h2>
+        <p>Different people, different jobs, different years — and somehow the same scene plays out. That isn't bad luck. It's a structure. Fractalogie makes it visible.</p>
+      </div>
+      <div class="stats reveal" data-d="1">
+        <div class="stat"><div class="v"><span data-count="1">1</span></div><div class="l">free scan to start</div></div>
+        <div class="stat"><div class="v">∞</div><div class="l">loops to decode</div></div>
+        <div class="stat"><div class="v"><span data-count="0">0</span></div><div class="l">trackers · ever</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
   <section id="how">
     <div class="wrap">
       <div class="shead reveal">
         <span class="eyebrow">The scan</span>
         <h2>Four steps, one loop</h2>
-        <p>A scan takes a few minutes. You don't fill in forms — you have a short, precise conversation with a mirror that only ever follows one thread.</p>
+        <p>You don't fill in forms. You have a short, precise conversation with a mirror that only ever follows one thread.</p>
       </div>
       <div class="steps">
         <div class="step reveal"><div class="num">01</div><h3>Name it</h3><p>Choose a situation that keeps happening and quietly holds you back.</p></div>
@@ -126,7 +127,34 @@
     </div>
   </section>
 
-  <!-- ── Features ─────────────────────────────────────────────────────── -->
+  <!-- ═══ STICKY SHOWCASE ═══ -->
+  <section class="showcase">
+    <div class="wrap">
+      <div class="showcase-inner">
+        <div class="showcase-sticky">
+          <div class="showcase-phone">
+            <div class="device">
+              <div class="device-glow"></div>
+              <div class="showcase-shot on" data-i="0"><img src="shots/02-scan.jpg" alt="Guided scan" /></div>
+              <div class="showcase-shot" data-i="1"><img src="shots/03-insights.jpg" alt="Insights" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="2"><img src="shots/04-map.jpg" alt="Fractal map" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="3"><img src="shots/05-evolution.jpg" alt="Evolution dashboard" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="4"><img src="shots/06-reconstruction.jpg" alt="Reconstruction" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-steps">
+          <div class="sc-step on" data-i="0"><div class="idx">01 / 05</div><h3>A guided scan reads what you can't see</h3><p>A calm, live conversation that asks one destabilising question at a time — never a flood, never advice.</p></div>
+          <div class="sc-step" data-i="1"><div class="idx">02 / 05</div><h3>Every scan returns a clear insight</h3><p>One crisp revelation, not a feed to scroll. The Mirror names a repetition you hadn't put into words.</p></div>
+          <div class="sc-step" data-i="2"><div class="idx">03 / 05</div><h3>Every loop traces to one attractor</h3><p>Your personal map shows how relationships, money, work and body all run the same structure.</p></div>
+          <div class="sc-step" data-i="3"><div class="idx">04 / 05</div><h3>Watch the architecture of who you're becoming</h3><p>Saved motifs and revelations build a living picture of your structure, evolving with every scan.</p></div>
+          <div class="sc-step" data-i="4"><div class="idx">05 / 05</div><h3>Don't just see the pattern — rewrite it</h3><p>When seeing isn't enough, a private 1:1 reconstruction reorganises the identity generating the loop.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURES ═══ -->
   <section id="features">
     <div class="wrap">
       <div class="shead reveal">
@@ -140,12 +168,32 @@
         <div class="feature reveal" data-d="2"><div class="ic">✦</div><h3>Your personal map</h3><p>Save motifs and revelations to a living map of your structure that grows with every scan.</p></div>
         <div class="feature reveal"><div class="ic">∞</div><h3>Unlimited scans</h3><p>With Founding Access, decode as many loops as you like — across relationships, money, work and body.</p></div>
         <div class="feature reveal" data-d="1"><div class="ic">⌖</div><h3>Private by design</h3><p>No ads, no trackers, no data brokers. Use it without an account; erase everything in one tap.</p></div>
-        <div class="feature reveal" data-d="2"><div class="ic">⟡</div><h3>Yours, everywhere</h3><p>Sign in to sync your scans securely across devices. Available in English, French, Spanish and German.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">⟡</div><h3>Yours, everywhere</h3><p>Sign in to sync your scans securely across devices. English, French, Spanish &amp; German.</p></div>
       </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="features.html">Explore every feature →</a></div>
     </div>
   </section>
 
-  <!-- ── Beyond ───────────────────────────────────────────────────────── -->
+  <!-- ═══ THE METHOD (arc) ═══ -->
+  <section id="method">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">The method</span>
+        <h2>How a loop comes <span class="grad-v italic">undone</span></h2>
+        <p>Fractalogie follows one strict sequence. Never skipping, never merging — one loop, all the way down.</p>
+      </div>
+      <div class="arc">
+        <div class="arc-row reveal"><div class="n">01</div><div><h3>The fractal quadrant</h3><p>Trigger, reaction, emotion, price — the four corners of the loop, surfaced in your own words.</p></div></div>
+        <div class="arc-row reveal"><div class="n">02</div><div><h3>The hidden logic</h3><p>What the pattern protects you from, and the emotional risk it quietly helps you avoid.</p></div></div>
+        <div class="arc-row reveal"><div class="n">03</div><div><h3>The reversal</h3><p>“It's not fear protecting you from failure — it's failure protecting you from being seen.”</p></div></div>
+        <div class="arc-row reveal"><div class="n">04</div><div><h3>The fractal zoom</h3><p>The same structure, found again in another domain. Not many problems — one, repeating.</p></div></div>
+        <div class="arc-row reveal"><div class="n">05</div><div><h3>The attractor identity</h3><p>“I am someone who ___.” The self-definition the whole loop has been organised to protect.</p></div></div>
+      </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="philosophy.html">Read the philosophy →</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ BEYOND ═══ -->
   <section>
     <div class="wrap">
       <div class="band reveal">
@@ -157,7 +205,7 @@
     </div>
   </section>
 
-  <!-- ── Pricing ──────────────────────────────────────────────────────── -->
+  <!-- ═══ PRICING ═══ -->
   <section id="pricing">
     <div class="wrap">
       <div class="shead reveal">
@@ -169,29 +217,21 @@
         <div class="plan reveal">
           <span class="tag">Free</span>
           <div class="amt">€0</div>
-          <ul>
-            <li>One complete scan</li>
-            <li>Your first fractal motif</li>
-            <li>No account required</li>
-          </ul>
+          <p class="sub">One complete scan</p>
+          <ul><li>Your first fractal motif</li><li>No account required</li><li>Text only · no tracking</li></ul>
         </div>
         <div class="plan featured reveal" data-d="1">
           <span class="tag">Founding Access</span>
           <div class="amt">€59.99<small> / year</small></div>
-          <p class="amt-note">or €9.99 / month</p>
-          <ul>
-            <li>Unlimited fractal scans</li>
-            <li>Full personal map &amp; history</li>
-            <li>Cloud sync across devices</li>
-            <li>Cancel anytime in App Store settings</li>
-          </ul>
+          <p class="sub">or €9.99 / month · save 50% yearly</p>
+          <ul><li>Unlimited fractal scans</li><li>Full personal map &amp; history</li><li>Cloud sync across devices</li><li>Cancel anytime in App Store settings</li></ul>
         </div>
       </div>
-      <p class="center" style="margin-top:22px;color:var(--ink-30);font-size:13px;">The exact price is shown in the app before purchase, in your local currency. Subscriptions auto-renew until cancelled.</p>
+      <p class="center" style="margin-top:22px;color:var(--ink-25);font-size:13px;">Auto-renews until cancelled. The exact price is shown in the app before purchase, in your local currency.</p>
     </div>
   </section>
 
-  <!-- ── FAQ ──────────────────────────────────────────────────────────── -->
+  <!-- ═══ FAQ ═══ -->
   <section id="faq">
     <div class="wrap">
       <div class="shead reveal"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
@@ -199,22 +239,36 @@
         <details class="qa"><summary>Is Fractalogie therapy?<span class="chev">＋</span></summary><div class="a">No. Fractalogie is a tool for self-reflection — not therapy, medical care, or mental-health treatment. It doesn't diagnose or treat anything, and it's not a substitute for a qualified professional. If you're in distress, please contact a professional or your local emergency number.</div></details>
         <details class="qa"><summary>What happens to what I write?<span class="chev">＋</span></summary><div class="a">Your scan text is sent securely to OpenAI's API to generate your analysis, and is never used to train models. Without an account it stays on your device; with an account it's stored privately (Supabase) so it syncs across devices. We sell nothing and run no tracking. See our <a href="privacy.html">Privacy Policy</a>.</div></details>
         <details class="qa"><summary>Do I need an account?<span class="chev">＋</span></summary><div class="a">No. The core of the app works without one. Signing in (Apple or Google) simply enables cloud sync. You can delete your account and all cloud data in one tap from the app.</div></details>
-        <details class="qa"><summary>Which platforms and languages?<span class="chev">＋</span></summary><div class="a">Fractalogie is an iOS app, available in English, French, Spanish and German. The interface and every analysis follow your chosen language.</div></details>
-        <details class="qa"><summary>How does billing work?<span class="chev">＋</span></summary><div class="a">Your first scan is free. Founding Access is a monthly auto-renewing subscription purchased through Apple; the price is shown before you buy. It renews unless cancelled at least 24h before the period ends — manage it anytime in your App Store settings.</div></details>
+        <details class="qa"><summary>Which platforms and languages?<span class="chev">＋</span></summary><div class="a">Fractalogie launches on iOS (Android coming soon), in English, French, Spanish and German. The interface and every analysis follow your chosen language.</div></details>
+        <details class="qa"><summary>How does billing work?<span class="chev">＋</span></summary><div class="a">Your first scan is free. Founding Access is an auto-renewing subscription purchased through Apple (€59.99/year or €9.99/month); the price is shown before you buy. It renews unless cancelled at least 24h before the period ends — manage it anytime in your App Store settings.</div></details>
       </div>
     </div>
   </section>
 
-  <!-- ── Disclaimer ───────────────────────────────────────────────────── -->
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="disclaimer reveal">
-        <p>Fractalogie is for self-reflection only. It is not medical, psychological, or professional advice, and not a crisis service. If you may be in danger, contact your local emergency number (112 in the EU, 988 in the US) or a qualified professional.</p>
+  <!-- ═══ FINAL CTA ═══ -->
+  <section id="get">
+    <div class="wrap wrap-sm">
+      <div class="cta-final reveal">
+        <span class="eyebrow">Coming soon</span>
+        <h2>See the <span class="grad italic">pattern</span></h2>
+        <p>Be first to know when Fractalogie lands. One scan is free — no account, no tracking, no noise.</p>
+        <div class="badges" style="justify-content:center;">
+          <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20iOS">
+            <span class="soon">Soon</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Coming soon to the</small><b>App Store</b></span>
+          </a>
+          <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20Android">
+            <span class="soon">Soon</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>In construction for</small><b>Google Play</b></span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Footer ───────────────────────────────────────────────────────── -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="site">
     <div class="wrap">
       <div class="cols">
@@ -224,10 +278,10 @@
         </div>
         <div class="fcol">
           <h4>Product</h4>
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="features.html">Features</a>
+          <a href="philosophy.html">Philosophy</a>
+          <a href="pricing.html">Pricing</a>
         </div>
         <div class="fcol">
           <h4>Legal</h4>
@@ -243,7 +297,7 @@
       </div>
       <div class="legal">
         <span>© <span data-year>2026</span> Fractalogie. All rights reserved.</span>
-        <span>Made with care · iOS</span>
+        <span>Made with care · iOS — Android soon</span>
       </div>
     </div>
   </footer>

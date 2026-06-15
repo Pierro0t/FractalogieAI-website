@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://fractalogie.ai/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/"/>
-  </url>
-  <url><loc>https://fractalogie.ai/privacy</loc></url>
-  <url><loc>https://fractalogie.ai/terms</loc></url>
-  <url><loc>https://fractalogie.ai/support</loc></url>
-  <url><loc>https://fractalogie.ai/fr/</loc></url>
-  <url><loc>https://fractalogie.ai/fr/privacy</loc></url>
-  <url><loc>https://fractalogie.ai/fr/terms</loc></url>
-  <url><loc>https://fractalogie.ai/fr/support</loc></url>
-  <url><loc>https://fractalogie.ai/es/</loc></url>
-  <url><loc>https://fractalogie.ai/es/privacy</loc></url>
-  <url><loc>https://fractalogie.ai/es/terms</loc></url>
-  <url><loc>https://fractalogie.ai/es/support</loc></url>
-  <url><loc>https://fractalogie.ai/de/</loc></url>
-  <url><loc>https://fractalogie.ai/de/privacy</loc></url>
-  <url><loc>https://fractalogie.ai/de/terms</loc></url>
-  <url><loc>https://fractalogie.ai/de/support</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://fractalogie.ai/</loc><priority>1.0</priority></url>
+  <url><loc>https://fractalogie.ai/how-it-works</loc><priority>0.8</priority></url>
+  <url><loc>https://fractalogie.ai/features</loc><priority>0.8</priority></url>
+  <url><loc>https://fractalogie.ai/philosophy</loc><priority>0.7</priority></url>
+  <url><loc>https://fractalogie.ai/pricing</loc><priority>0.8</priority></url>
+  <url><loc>https://fractalogie.ai/support</loc><priority>0.5</priority></url>
+  <url><loc>https://fractalogie.ai/privacy</loc><priority>0.4</priority></url>
+  <url><loc>https://fractalogie.ai/terms</loc><priority>0.4</priority></url>
 </urlset>
