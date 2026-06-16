@@ -38,8 +38,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 /* overflow-x: clip prevents any horizontal scroll WITHOUT breaking position:sticky
    (unlike hidden/auto, clip doesn't create a scroll container). */
-html, body { overflow-x: hidden; max-width: 100%; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* overflow-x: clip stops horizontal scroll WITHOUT breaking position:sticky
+   (hidden makes html/body a scroll container → kills the sticky showcase). */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { max-width: 100%; }
 img, svg, canvas { max-width: 100%; }
 ::selection { background: rgba(168, 123, 255, 0.35); color: #fff; }
 
@@ -205,7 +207,7 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .band p { color: var(--ink-60); max-width: 54ch; margin: 0 auto 30px; font-size: 17px; }
 
 /* ── Pricing ──────────────────────────────────────────────────────────── */
-.price-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; max-width: 800px; margin: 0 auto; }
+.price-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto; }
 .plan { padding: 38px; border-radius: var(--r); background: var(--surface); border: 1px solid var(--line); }
 .plan.featured { border-color: rgba(231,183,101,0.42); background: linear-gradient(160deg, rgba(231,183,101,0.1), var(--surface)); position: relative; }
 .plan .tag { font-family: var(--fs-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
