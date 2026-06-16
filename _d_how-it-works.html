@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
+
+  <title>How it works — Fractalogie</title>
+  <meta name="description" content="How a loop comes undone: name one recurring situation, describe a single moment, be mirrored by a live AI asking one precise question at a time — and watch the structure crystallise into a single motif." />
+  <meta name="keywords" content="how it works, AI self-reflection, fractal motif, hidden logic, recurring patterns, introspection, fractalogie, guided scan" />
+  <link rel="canonical" href="https://fractalogie.ai/how-it-works" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fractalogie.ai/how-it-works" />
+  <meta property="og:title" content="How it works — Fractalogie" />
+  <meta property="og:description" content="One situation, a few minutes, one thread. See exactly how Fractalogie surfaces the loop running quietly beneath your life." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/02-scan.jpg" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How it works — Fractalogie" />
+  <meta name="twitter:description" content="One situation, a few minutes, one thread. See exactly how Fractalogie surfaces the loop running quietly beneath your life." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/02-scan.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Two-column device feature rows (page-local) ───────────────────── */
+    .twocol { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+    .twocol.flip .tc-media { order: 2; }
+    .tc-media { position: relative; display: flex; justify-content: center; }
+    .tc-copy .eyebrow { display: inline-block; margin-bottom: 18px; }
+    .tc-copy h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 20px; }
+    .tc-copy p { color: var(--ink-60); font-size: 17px; margin-bottom: 16px; max-width: 50ch; }
+    .tc-copy p:last-child { margin-bottom: 0; }
+    .tc-list { list-style: none; margin: 24px 0 0; display: grid; gap: 13px; }
+    .tc-list li { font-size: 15px; color: var(--ink-80); padding-left: 28px; position: relative; }
+    .tc-list li::before { content: '◆'; position: absolute; left: 0; top: 3px; color: var(--gold); font-size: 11px; }
+    .disclaimer { max-width: 720px; margin: 0 auto; text-align: center; }
+    .disclaimer .eyebrow { display: inline-block; margin-bottom: 18px; }
+    .disclaimer h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 18px; }
+    .disclaimer p { color: var(--ink-60); font-size: 16.5px; margin: 0 auto 16px; max-width: 60ch; }
+    .disclaimer .fine { font-family: var(--fs-mono); font-size: 12.5px; letter-spacing: 0.02em; color: var(--ink-40); max-width: 64ch; margin: 22px auto 0; line-height: 1.7; }
+    @media (max-width: 860px) {
+      .twocol { grid-template-columns: 1fr; gap: 44px; text-align: center; }
+      .twocol.flip .tc-media { order: 0; }
+      .tc-copy p, .tc-list { margin-left: auto; margin-right: auto; }
+      .tc-copy .eyebrow { margin-left: auto; margin-right: auto; }
+      .tc-list { display: inline-grid; text-align: left; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"How Fractalogie works","description":"Name one recurring situation, describe a single moment, be mirrored by a live AI asking one precise question at a time, and see the loop crystallise into a single motif.","step":[{"@type":"HowToStep","name":"Name it","text":"Pick a recurring situation that quietly holds you back."},{"@type":"HowToStep","name":"Describe once","text":"Tell it about one real moment, in your own words."},{"@type":"HowToStep","name":"Be mirrored","text":"A live AI asks one precise question at a time — trigger, reaction, emotion, price."},{"@type":"HowToStep","name":"See the structure","text":"The loop crystallises into a single motif sentence and its hidden logic."}]}
+  </script>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">How it works</a>
+        <a href="features.html">Features</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="nav-cta" href="#get">Get the app</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="top">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">How it works</span>
+        <h1 style="font-size:clamp(40px,6.4vw,72px);margin-bottom:22px;">How a loop comes <span class="grad-v italic">undone</span></h1>
+        <p>One situation. A few minutes. One thread, followed all the way down — until the structure quietly running your life becomes something you can finally see.</p>
+      </div>
+      <p class="center reveal" data-d="2" style="font-family:var(--fs-mono);font-size:11px;letter-spacing:0.05em;color:var(--ink-40);">No account needed · text only · no tracking</p>
+    </div>
+  </section>
+
+  <!-- ═══ THE FOUR STEPS ═══ -->
+  <section id="steps" style="padding-top:0;">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">The scan</span>
+        <h2>Four steps, one loop</h2>
+        <p>You don't fill in forms or pick from menus. You have a short, precise conversation with a mirror that only ever follows one thread.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><h3>Name it</h3><p>Choose a situation that keeps happening — the argument, the exit, the silence — and quietly holds you back.</p></div>
+        <div class="step reveal" data-d="1"><div class="num">02</div><h3>Describe once</h3><p>Tell it about one real, recent moment it happened. No theory, no diagnosis — just your own words.</p></div>
+        <div class="step reveal" data-d="2"><div class="num">03</div><h3>Be mirrored</h3><p>A live AI asks one precise question at a time, surfacing the trigger, your reaction, the emotion, and the price.</p></div>
+        <div class="step reveal" data-d="3"><div class="num">04</div><h3>See the structure</h3><p>The loop crystallises into a single motif sentence — and the hidden logic that has been keeping it running.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE CONVERSATION (device row 1) ═══ -->
+  <section id="conversation">
+    <div class="wrap">
+      <div class="twocol">
+        <div class="tc-media reveal">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/02-scan.jpg" alt="The live Fractalogie scan, one question at a time" loading="lazy" />
+          </div>
+        </div>
+        <div class="tc-copy reveal" data-d="1">
+          <span class="eyebrow">The conversation</span>
+          <h2>A live mirror, <span class="grad italic">one question</span> at a time</h2>
+          <p>This isn't a chatbot that talks at you. It's a mirror. Calm and precise, it reads what you wrote and reflects it back — then asks the single question that goes one layer deeper.</p>
+          <p>It never floods you with options. It never moralises or hands out advice. It asks one thing, waits, and follows your answer — destabilising in the gentlest way, because it only ever names what is already there.</p>
+          <ul class="tc-list">
+            <li>One question at a time — never a wall of text</li>
+            <li>Calm and precise, never clinical or cold</li>
+            <li>No advice, no judgement, no moralising</li>
+            <li>Follows your thread — never changes the subject</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE REVELATION (device row 2) ═══ -->
+  <section id="revelation" style="padding-top:0;">
+    <div class="wrap">
+      <div class="twocol flip">
+        <div class="tc-media reveal">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/03-insights.jpg" alt="The revelation: motif, hidden logic and reversal" loading="lazy" />
+          </div>
+        </div>
+        <div class="tc-copy reveal" data-d="1">
+          <span class="eyebrow">The revelation</span>
+          <h2>One clear insight, <span class="grad-v italic">not a feed</span></h2>
+          <p>When the thread is complete, the mirror returns a single, crisp revelation — not an endless feed to scroll. It puts into one sentence a repetition you'd felt for years but never quite named.</p>
+          <p>You see the fractal motif, the hidden logic underneath, the reversal that loosens its grip, and where it sits on your personal map — the structure beneath relationships, money, work and body.</p>
+          <ul class="tc-list">
+            <li>Your fractal motif, in a single sentence</li>
+            <li>The hidden logic the loop protects</li>
+            <li>The reversal that destabilises it</li>
+            <li>Its place on your personal map</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE METHOD (arc) ═══ -->
+  <section id="method">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">The method</span>
+        <h2>One strict sequence, <span class="grad italic">all the way down</span></h2>
+        <p>Fractalogie never skips and never merges steps. It follows one loop through five movements — from its four corners to the identity holding it in place.</p>
+      </div>
+      <div class="arc">
+        <div class="arc-row reveal"><div class="n">01</div><div><h3>The fractal quadrant</h3><p>Trigger, reaction, emotion, price — the four corners of the loop, surfaced in your own words rather than imposed from outside.</p></div></div>
+        <div class="arc-row reveal"><div class="n">02</div><div><h3>The hidden logic</h3><p>What the pattern quietly protects you from, and the emotional risk it has been helping you avoid all along.</p></div></div>
+        <div class="arc-row reveal"><div class="n">03</div><div><h3>The reversal</h3><p>“It's not fear protecting you from failure — it's failure protecting you from being seen.” The line that flips the loop inside out.</p></div></div>
+        <div class="arc-row reveal"><div class="n">04</div><div><h3>The fractal zoom</h3><p>The same structure, found again in another domain. Not many separate problems — one, repeating, at a different scale.</p></div></div>
+        <div class="arc-row reveal"><div class="n">05</div><div><h3>The attractor identity</h3><p>“I am someone who ___.” The self-definition the whole loop has been organised, all this time, to protect.</p></div></div>
+      </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="philosophy.html">Read the philosophy →</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ REASSURANCE ═══ -->
+  <section id="reassurance">
+    <div class="wrap">
+      <div class="disclaimer reveal">
+        <span class="eyebrow">Quiet by design</span>
+        <h2>Text only. No camera. <span class="grad italic">No noise.</span></h2>
+        <p>Fractalogie reads words, not faces — there's no camera, no microphone, no tracking, and no account required to begin. Your first scan starts the moment you do.</p>
+        <p>Sign in only if you want your map to sync across devices. Either way, we sell nothing and run no trackers, and you can erase everything in a single tap.</p>
+        <p class="fine">Fractalogie is a tool for self-reflection. Its results are interpretive reflections, not facts, diagnoses, or medical, psychological or professional advice — and not a substitute for a qualified professional. If you're in distress, please contact a professional or your local emergency number.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BAND ═══ -->
+  <section id="get">
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Coming soon · iOS</span>
+        <h2>Follow one thread <span class="grad italic">all the way down</span></h2>
+        <p>Your first scan is free — no account, no tracking, no noise. See how a single recurring situation reveals the structure beneath it.</p>
+        <a class="btn btn-ghost" href="pricing.html" style="margin-bottom:30px;">See pricing →</a>
+        <div class="badges" style="justify-content:center;">
+          <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20iOS">
+            <span class="soon">Soon</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Coming soon to the</small><b>App Store</b></span>
+          </a>
+          <a class="store dim" href="mailto:contact@fractalogie.ai?subject=Notify%20me%20—%20Android">
+            <span class="soon">Soon</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>In construction for</small><b>Google Play</b></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="index.html"><img src="logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">An AI-guided mirror for the patterns that quietly organise your life.</p>
+        </div>
+        <div class="fcol">
+          <h4>Product</h4>
+          <a href="how-it-works.html">How it works</a>
+          <a href="features.html">Features</a>
+          <a href="philosophy.html">Philosophy</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="fcol">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="fcol">
+          <h4>Contact</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="support.html">Help &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. All rights reserved.</span>
+        <span>Made with care · iOS — Android soon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+<script>addEventListener("load",function(){setTimeout(function(){var de=document.documentElement,vw=de.clientWidth,list=[];document.querySelectorAll("body *").forEach(function(el){var s=getComputedStyle(el);if(s.position==="fixed")return;if(el.closest(".marquee"))return;var r=el.getBoundingClientRect();if(r.right>vw+1)list.push(el.tagName.toLowerCase()+"."+(String(el.className||"").split(" ")[0])+"@"+Math.round(r.right))});list=Array.from(new Set(list));var b=document.createElement("div");b.style.cssText="position:fixed;top:0;left:0;width:"+vw+"px;z-index:99999;background:"+(list.length?"#e00":"#0a0")+";color:#fff;font:13px monospace;padding:10px;white-space:pre-wrap";b.textContent="vw="+vw+(list.length?(" OFF: "+list.slice(0,6).join(" ")):"  NO OVERFLOW ✓");document.body.appendChild(b)},700)});</script></body>
+</html>
