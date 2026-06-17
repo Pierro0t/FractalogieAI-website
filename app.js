@@ -6,8 +6,11 @@
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarse = matchMedia('(pointer: coarse)').matches;
   var small = innerWidth < 700;
-  var DPR = Math.min(devicePixelRatio || 1, 2);
+  // low-end devices: drop to static visuals + DPR 1 + no grain (thermal/battery).
+  var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+  var DPR = lowEnd ? 1 : Math.min(devicePixelRatio || 1, coarse ? 1.5 : 2);
   var TAU = Math.PI * 2;
+  if (lowEnd) { var _g = document.querySelector('.grain'); if (_g) _g.remove(); }
 
   /* Mount a canvas anim: handles sizing + only runs while on-screen. */
   function mountCanvas(canvas, init) {
@@ -20,26 +23,33 @@
       if (api && api.resize) api.resize(W, H);
     }
     api = init(ctx, function () { return W; }, function () { return H; });
+    addEventListener('resize', size); size();
+    if (reduce || lowEnd) { if (api.still) api.still(W, H); return; } // static only — no loop
     function loop() { if (!vis) return; api.frame(W, H); raf = requestAnimationFrame(loop); }
     var io = new IntersectionObserver(function (e) {
       vis = e[0].isIntersecting;
       if (vis && !raf) loop(); else { cancelAnimationFrame(raf); raf = 0; }
     }, { rootMargin: '120px' });
-    addEventListener('resize', size); size(); io.observe(canvas);
-    if (api.still) api.still(W, H); // paint one static frame for reduced-motion
+    io.observe(canvas);
+    if (api.still) api.still(W, H);
   }
 
   /* ── 1 · STRANGE ATTRACTOR ──────────────────────────────────────────────
      "Every loop traces to one attractor." A morphing de Jong attractor. */
   (function () {
     var c = document.getElementById('attractor'); if (!c) return;
-    mountCanvas(c, function (ctx, gw, gh) {
+    var sec = c.closest('.attractor-sec'), ox = 0, oy = 0;
+    if (sec && coarse && !reduce) sec.addEventListener('touchmove', function (e) {
+      var tt = e.touches[0]; if (!tt) return; var r = sec.getBoundingClientRect();
+      ox = ((tt.clientX - r.left) / r.width - 0.5) * 0.7; oy = ((tt.clientY - r.top) / r.height - 0.5) * 0.7;
+    }, { passive: true });
+    mountCanvas(c, function (ctx) {
       var a = -2, b = -2, cc = -1.2, d = 2, t = 0, x = 0, y = 0;
       var N = small ? 1600 : 3800;
       function draw(W, H, fade) {
         ctx.fillStyle = 'rgba(4,5,12,' + fade + ')'; ctx.fillRect(0, 0, W, H);
-        t += 0.0009;
-        a = -2 + Math.sin(t) * 0.32; b = -2 + Math.cos(t * 0.7) * 0.32;
+        t += 0.0009; ox *= 0.95; oy *= 0.95; // ease back to the autonomous attractor
+        a = -2 + Math.sin(t) * 0.32 + ox; b = -2 + Math.cos(t * 0.7) * 0.32 + oy;
         cc = -1.2 + Math.sin(t * 1.3) * 0.22; d = 2 + Math.cos(t * 0.9) * 0.22;
         var cx = W / 2, cy = H / 2, s = Math.min(W, H) * 0.23;
         for (var i = 0; i < N; i++) {
@@ -95,11 +105,10 @@
      One structure, every scale. Concentric fractal rings scale with scroll. */
   (function () {
     var sec = document.querySelector('.fzoom'); var c = document.getElementById('fzoom'); if (!sec || !c) return;
-    var prog = 0;
-    addEventListener('scroll', function () {
-      var r = sec.getBoundingClientRect();
-      prog = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
-    }, { passive: true });
+    var prog = 0, secTop = 0, secH = 0;
+    // cache geometry once (resize/load) — NEVER read layout in the scroll path
+    function geo() { secTop = sec.getBoundingClientRect().top + (window.pageYOffset || 0); secH = sec.offsetHeight; }
+    addEventListener('resize', geo); addEventListener('load', geo); geo();
     mountCanvas(c, function (ctx) {
       function ring(W, H, scale) {
         var cx = W / 2, cy = H / 2, base = Math.min(W, H) * 0.5;
@@ -117,7 +126,7 @@
           for (var b = 0; b < 6; b++) { var an = b / 6 * TAU; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + Math.cos(an) * s, cy + Math.sin(an) * s); ctx.globalAlpha = alpha * 0.5; ctx.stroke(); ctx.globalAlpha = 1; }
         }
       }
-      function paint(W, H) { ctx.clearRect(0, 0, W, H); var z = 1 + (prog % 1) * 1; ring(W, H, z); ring(W, H, z * 0.5); }
+      function paint(W, H) { var sy = window.pageYOffset || 0; prog = Math.min(1, Math.max(0, (sy - secTop) / Math.max(1, secH - innerHeight))); ctx.clearRect(0, 0, W, H); var z = 1 + (prog % 1); ring(W, H, z); ring(W, H, z * 0.5); }
       return { frame: function (W, H) { paint(W, H); }, still: function (W, H) { prog = 0.3; paint(W, H); } };
     });
   })();
@@ -136,7 +145,7 @@
           out += (ch === ' ' || i < done) ? ch : glyphs[(Math.random() * glyphs.length) | 0];
         }
         el.textContent = out; f++;
-        if (done >= len) { clearInterval(id); el.textContent = target; }
+        if (done >= len) { clearInterval(id); el.textContent = target; if (navigator.vibrate && coarse) navigator.vibrate(8); }
       }, 28);
     }
     var els = document.querySelectorAll('[data-decode]');
@@ -148,6 +157,8 @@
       });
     }, { threshold: 0.6 });
     els.forEach(function (el) { io.observe(el); });
+    // tap a decoded headline to replay the decode (mobile toy)
+    if (coarse) els.forEach(function (el) { el.addEventListener('click', function () { if (!el.getAttribute('data-text')) return; el.dataset.done = ''; decode(el); }); });
   })();
 
   /* ── 5 · THE REVERSAL (text swap loop) ──────────────────────────────────*/
@@ -157,12 +168,12 @@
     var on = false;
     var io = new IntersectionObserver(function (e) { on = e[0].isIntersecting; }, { threshold: 0.5 });
     io.observe(el); var flip = false;
-    setInterval(function () { if (!on) return; flip = !flip; a.classList.toggle('out', flip); b.classList.toggle('in', flip); }, 3400);
+    setInterval(function () { if (!on) return; flip = !flip; a.classList.toggle('out', flip); b.classList.toggle('in', flip); if (navigator.vibrate && coarse) navigator.vibrate(6); }, 3400);
   })();
 
   /* ── 6 · CONSTELLATION CURSOR (desktop) ─────────────────────────────────*/
   (function () {
-    if (reduce || coarse) return;
+    if (reduce || lowEnd) return;
     var c = document.getElementById('constellation'); if (!c) return;
     var ctx = c.getContext('2d'), W, H, mx = -999, my = -999, pts = [];
     function size() {
@@ -181,6 +192,10 @@
       lx = nx; ly = ny; mx = nx; my = ny;
     });
     addEventListener('mouseleave', function () { intensity = 0; mx = my = -9999; });
+    addEventListener('touchmove', function (e) {
+      var tt = e.touches[0]; if (!tt) return; var nx = tt.clientX * DPR, ny = tt.clientY * DPR;
+      intensity = Math.min(1, intensity + Math.hypot(nx - lx, ny - ly) / 420); lx = nx; ly = ny; mx = nx; my = ny;
+    }, { passive: true });
     (function loop() {
       ctx.clearRect(0, 0, W, H);
       intensity *= 0.9; // fade out when the mouse stops (~0.4s)
@@ -199,6 +214,27 @@
       }
       requestAnimationFrame(loop);
     })();
+  })();
+
+  /* ── Gyroscope parallax (mobile): tilt the phone → the cosmos shifts ─────*/
+  (function () {
+    if (reduce || !coarse) return;
+    var root = document.documentElement, tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+    function onOrient(e) {
+      if (e.gamma == null || e.beta == null) return;
+      tx = Math.max(-14, Math.min(14, e.gamma)) / 14 * 10;
+      ty = Math.max(-14, Math.min(14, e.beta - 45)) / 14 * 10;
+      active = true;
+    }
+    function tick() { if (active) { cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08; root.style.setProperty('--gx', cx.toFixed(1) + 'px'); root.style.setProperty('--gy', cy.toFixed(1) + 'px'); } requestAnimationFrame(tick); }
+    function start() {
+      var D = window.DeviceOrientationEvent;
+      if (D && typeof D.requestPermission === 'function') D.requestPermission().then(function (p) { if (p === 'granted') addEventListener('deviceorientation', onOrient); }).catch(function () {});
+      else addEventListener('deviceorientation', onOrient);
+    }
+    // iOS 13+ needs a user gesture for the permission prompt — trigger on first touch.
+    addEventListener('touchstart', function once() { removeEventListener('touchstart', once); start(); }, { passive: true });
+    requestAnimationFrame(tick);
   })();
 
   /* ── Store badges: tap → "not available yet" toast (no dead button, no email) */
@@ -231,7 +267,12 @@
 
   var scSteps = document.querySelectorAll('.sc-step'), scShots = document.querySelectorAll('.showcase-shot');
   if (scSteps.length && scShots.length && 'IntersectionObserver' in window) {
-    var setA = function (i) { scSteps.forEach(function (s, j) { s.classList.toggle('on', j === i); }); scShots.forEach(function (s, j) { s.classList.toggle('on', j === i); }); };
+    var setA = function (i) {
+      scSteps.forEach(function (s, j) { s.classList.toggle('on', j === i); });
+      var show = function () { scShots.forEach(function (s, j) { s.classList.toggle('on', j === i); }); };
+      var img = scShots[i] && scShots[i].querySelector('img');
+      if (img && img.decode) img.decode().then(show).catch(show); else show(); // decode before the crossfade (no hitch)
+    };
     var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) setA(+e.target.getAttribute('data-i')); }); }, { rootMargin: '-45% 0px -45% 0px' });
     scSteps.forEach(function (s) { sio.observe(s); });
   }
@@ -251,11 +292,12 @@
 
   /* Starfield (kept). */
   var canvas = document.getElementById('stars');
-  if (canvas && !reduce) {
-    var sctx = canvas.getContext('2d'), st = [], SW, SH;
-    function sresize() { SW = canvas.width = innerWidth * DPR; SH = canvas.height = innerHeight * DPR; canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px'; var n = Math.min(140, (innerWidth * innerHeight) / 13000); st = []; for (var i = 0; i < n; i++) st.push({ x: Math.random() * SW, y: Math.random() * SH, r: (Math.random() * 1.3 + 0.3) * DPR, a: Math.random() * 0.6 + 0.15, tw: Math.random() * 0.02 + 0.004, p: Math.random() * 6.28, h: Math.random() > 0.72 ? '231,183,101' : '245,242,234' }); }
-    (function stick() { sctx.clearRect(0, 0, SW, SH); for (var i = 0; i < st.length; i++) { var s = st[i]; s.p += s.tw; var al = s.a + Math.sin(s.p) * 0.12; sctx.beginPath(); sctx.arc(s.x, s.y, s.r, 0, TAU); sctx.fillStyle = 'rgba(' + s.h + ',' + Math.max(0, al) + ')'; sctx.fill(); } requestAnimationFrame(stick); })();
-    addEventListener('resize', sresize); sresize();
+  if (canvas && !reduce && !lowEnd) {
+    var sctx = canvas.getContext('2d'), st = [], SW, SH, srun = true, sraf = 0;
+    function sresize() { SW = canvas.width = innerWidth * DPR; SH = canvas.height = innerHeight * DPR; canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px'; var n = Math.min(coarse ? 90 : 140, (innerWidth * innerHeight) / (coarse ? 20000 : 13000)); st = []; for (var i = 0; i < n; i++) st.push({ x: Math.random() * SW, y: Math.random() * SH, r: (Math.random() * 1.3 + 0.3) * DPR, a: Math.random() * 0.6 + 0.15, tw: Math.random() * 0.02 + 0.004, p: Math.random() * 6.28, h: Math.random() > 0.72 ? '231,183,101' : '245,242,234' }); }
+    function stick() { if (!srun) return; sctx.clearRect(0, 0, SW, SH); for (var i = 0; i < st.length; i++) { var s = st[i]; s.p += s.tw; var al = s.a + Math.sin(s.p) * 0.12; sctx.beginPath(); sctx.arc(s.x, s.y, s.r, 0, TAU); sctx.fillStyle = 'rgba(' + s.h + ',' + Math.max(0, al) + ')'; sctx.fill(); } sraf = requestAnimationFrame(stick); }
+    document.addEventListener('visibilitychange', function () { srun = !document.hidden; if (srun) { cancelAnimationFrame(sraf); stick(); } });
+    addEventListener('resize', sresize); sresize(); stick();
   }
 
   var y = document.querySelector('[data-year]'); if (y) y.textContent = new Date().getFullYear();
