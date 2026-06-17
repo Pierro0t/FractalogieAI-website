@@ -168,24 +168,33 @@
     function size() {
       W = c.width = innerWidth * DPR; H = c.height = innerHeight * DPR;
       c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px';
-      pts = []; var n = Math.min(42, (innerWidth * innerHeight) / 44000);
+      pts = []; var n = Math.min(54, (innerWidth * innerHeight) / 34000);
       for (var i = 0; i < n; i++) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.12 * DPR, vy: (Math.random() - 0.5) * 0.12 * DPR });
     }
     addEventListener('resize', size); size();
-    addEventListener('mousemove', function (e) { mx = e.clientX * DPR; my = e.clientY * DPR; });
-    addEventListener('mouseleave', function () { mx = my = -9999; });
+    // intensity rises with mouse movement, decays when the cursor is still →
+    // the constellation only appears while you're actively playing with it.
+    var intensity = 0, lx = 0, ly = 0;
+    addEventListener('mousemove', function (e) {
+      var nx = e.clientX * DPR, ny = e.clientY * DPR;
+      intensity = Math.min(1, intensity + Math.hypot(nx - lx, ny - ly) / 420);
+      lx = nx; ly = ny; mx = nx; my = ny;
+    });
+    addEventListener('mouseleave', function () { intensity = 0; mx = my = -9999; });
     (function loop() {
       ctx.clearRect(0, 0, W, H);
-      var R = 104 * DPR;
+      intensity *= 0.9; // fade out when the mouse stops (~0.4s)
+      var R = 134 * DPR, draw = intensity > 0.02;
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i]; p.x += p.vx; p.y += p.vy;
         if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+        if (!draw) continue;
         var dx = p.x - mx, dy = p.y - my, dist = Math.hypot(dx, dy);
         if (dist < R) {
-          var al = (1 - dist / R) * 0.22;
+          var al = (1 - dist / R) * 0.55 * intensity;
           ctx.strokeStyle = 'rgba(231,183,101,' + al + ')'; ctx.lineWidth = DPR;
           ctx.beginPath(); ctx.moveTo(mx, my); ctx.lineTo(p.x, p.y); ctx.stroke();
-          ctx.fillStyle = 'rgba(240,207,155,' + (al + 0.1) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.2 * DPR, 0, TAU); ctx.fill();
+          ctx.fillStyle = 'rgba(240,207,155,' + (al + 0.16 * intensity) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.4 * DPR, 0, TAU); ctx.fill();
         }
       }
       requestAnimationFrame(loop);
