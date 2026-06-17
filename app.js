@@ -20,13 +20,15 @@
       if (api && api.resize) api.resize(W, H);
     }
     api = init(ctx, function () { return W; }, function () { return H; });
+    addEventListener('resize', size); size();
+    if (reduce) { if (api.still) api.still(W, H); return; } // reduced-motion → static but VISIBLE (no blank, no loop)
     function loop() { if (!vis) return; api.frame(W, H); raf = requestAnimationFrame(loop); }
     var io = new IntersectionObserver(function (e) {
       vis = e[0].isIntersecting;
       if (vis && !raf) loop(); else { cancelAnimationFrame(raf); raf = 0; }
     }, { rootMargin: '120px' });
-    addEventListener('resize', size); size(); io.observe(canvas);
-    if (api.still) api.still(W, H); // paint one static frame for reduced-motion
+    io.observe(canvas);
+    if (api.still) api.still(W, H);
   }
 
   /* ── 1 · STRANGE ATTRACTOR ──────────────────────────────────────────────
@@ -48,8 +50,8 @@
           x = nx; y = ny;
           var px = cx + x * s, py = cy + y * s;
           var g = (x + 2) / 4; // 0..1 → gold→violet
-          ctx.fillStyle = 'rgba(' + Math.round(231 - g * 63) + ',' + Math.round(183 - g * 60) + ',' + Math.round(101 + g * 154) + ',0.55)';
-          ctx.fillRect(px, py, DPR, DPR);
+          ctx.fillStyle = 'rgba(' + Math.round(231 - g * 63) + ',' + Math.round(183 - g * 60) + ',' + Math.round(101 + g * 154) + ',0.72)';
+          ctx.fillRect(px, py, 1.4 * DPR, 1.4 * DPR);
         }
       }
       return {
@@ -106,9 +108,9 @@
         for (var k = 0; k < 6; k++) {
           var s = base * scale * Math.pow(0.5, k);
           if (s < 4 || s > Math.max(W, H)) continue;
-          var alpha = Math.min(1, s / base) * 0.5;
+          var alpha = Math.min(1, s / base) * 0.72;
           ctx.strokeStyle = k % 2 ? 'rgba(168,123,255,' + alpha + ')' : 'rgba(231,183,101,' + alpha + ')';
-          ctx.lineWidth = DPR;
+          ctx.lineWidth = 1.5 * DPR;
           // hexagonal fractal node ring
           ctx.beginPath();
           for (var a = 0; a <= 6; a++) { var ang = a / 6 * TAU; var px = cx + Math.cos(ang) * s, py = cy + Math.sin(ang) * s; a ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
@@ -251,11 +253,12 @@
 
   /* Starfield (kept). */
   var canvas = document.getElementById('stars');
-  if (canvas && !reduce) {
+  if (canvas) {
     var sctx = canvas.getContext('2d'), st = [], SW, SH;
-    function sresize() { SW = canvas.width = innerWidth * DPR; SH = canvas.height = innerHeight * DPR; canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px'; var n = Math.min(140, (innerWidth * innerHeight) / 13000); st = []; for (var i = 0; i < n; i++) st.push({ x: Math.random() * SW, y: Math.random() * SH, r: (Math.random() * 1.3 + 0.3) * DPR, a: Math.random() * 0.6 + 0.15, tw: Math.random() * 0.02 + 0.004, p: Math.random() * 6.28, h: Math.random() > 0.72 ? '231,183,101' : '245,242,234' }); }
-    (function stick() { sctx.clearRect(0, 0, SW, SH); for (var i = 0; i < st.length; i++) { var s = st[i]; s.p += s.tw; var al = s.a + Math.sin(s.p) * 0.12; sctx.beginPath(); sctx.arc(s.x, s.y, s.r, 0, TAU); sctx.fillStyle = 'rgba(' + s.h + ',' + Math.max(0, al) + ')'; sctx.fill(); } requestAnimationFrame(stick); })();
+    function sresize() { SW = canvas.width = innerWidth * DPR; SH = canvas.height = innerHeight * DPR; canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px'; var n = Math.min(190, (innerWidth * innerHeight) / (small ? 6500 : 11000)); st = []; for (var i = 0; i < n; i++) st.push({ x: Math.random() * SW, y: Math.random() * SH, r: (Math.random() * 1.4 + 0.5) * DPR, a: Math.random() * 0.55 + 0.3, tw: Math.random() * 0.02 + 0.004, p: Math.random() * 6.28, h: Math.random() > 0.72 ? '231,183,101' : '245,242,234' }); }
+    function paintStars() { sctx.clearRect(0, 0, SW, SH); for (var i = 0; i < st.length; i++) { var s = st[i]; var al = reduce ? s.a : s.a + Math.sin(s.p += s.tw) * 0.12; sctx.beginPath(); sctx.arc(s.x, s.y, s.r, 0, TAU); sctx.fillStyle = 'rgba(' + s.h + ',' + Math.max(0, al) + ')'; sctx.fill(); } }
     addEventListener('resize', sresize); sresize();
+    if (reduce) paintStars(); else (function stick() { paintStars(); requestAnimationFrame(stick); })();
   }
 
   var y = document.querySelector('[data-year]'); if (y) y.textContent = new Date().getFullYear();
