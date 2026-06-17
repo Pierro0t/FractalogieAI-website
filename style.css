@@ -125,6 +125,7 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .store .st b { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
 .store .soon { position: absolute; top: -9px; right: 12px; font-family: var(--fs-mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--void); background: linear-gradient(108deg, var(--gold-2), var(--gold)); padding: 3px 8px; border-radius: 999px; font-weight: 700; }
 .store.dim { opacity: 0.92; cursor: default; }
+.store.dim:hover { transform: none; } /* non-clickable "coming soon" — no hover lift */
 
 /* ── Hero ─────────────────────────────────────────────────────────────── */
 .hero { padding: 70px 0 60px; min-height: calc(100vh - 68px); display: flex; align-items: center; }
