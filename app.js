@@ -168,7 +168,7 @@
     function size() {
       W = c.width = innerWidth * DPR; H = c.height = innerHeight * DPR;
       c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px';
-      pts = []; var n = Math.min(70, (innerWidth * innerHeight) / 26000);
+      pts = []; var n = Math.min(42, (innerWidth * innerHeight) / 44000);
       for (var i = 0; i < n; i++) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.12 * DPR, vy: (Math.random() - 0.5) * 0.12 * DPR });
     }
     addEventListener('resize', size); size();
@@ -176,19 +176,18 @@
     addEventListener('mouseleave', function () { mx = my = -9999; });
     (function loop() {
       ctx.clearRect(0, 0, W, H);
-      var R = 150 * DPR;
+      var R = 104 * DPR;
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i]; p.x += p.vx; p.y += p.vy;
         if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
         var dx = p.x - mx, dy = p.y - my, dist = Math.hypot(dx, dy);
         if (dist < R) {
-          var al = (1 - dist / R) * 0.5;
+          var al = (1 - dist / R) * 0.22;
           ctx.strokeStyle = 'rgba(231,183,101,' + al + ')'; ctx.lineWidth = DPR;
           ctx.beginPath(); ctx.moveTo(mx, my); ctx.lineTo(p.x, p.y); ctx.stroke();
-          ctx.fillStyle = 'rgba(240,207,155,' + (al + 0.3) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.6 * DPR, 0, TAU); ctx.fill();
+          ctx.fillStyle = 'rgba(240,207,155,' + (al + 0.1) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.2 * DPR, 0, TAU); ctx.fill();
         }
       }
-      if (mx > -999) { ctx.fillStyle = 'rgba(231,183,101,0.9)'; ctx.beginPath(); ctx.arc(mx, my, 3 * DPR, 0, TAU); ctx.fill(); }
       requestAnimationFrame(loop);
     })();
   })();
