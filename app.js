@@ -237,7 +237,7 @@
 
   var stats = document.querySelectorAll('[data-count]');
   if (stats.length && !reduce) {
-    var cio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; var el = e.target, target = parseFloat(el.getAttribute('data-count')), t0 = null; (function step(ts) { if (!t0) t0 = ts; var p = Math.min((ts - t0) / 1400, 1), eased = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(target * eased); if (p < 1) requestAnimationFrame(step); })(); cio.unobserve(el); }); }, { threshold: 0.5 });
+    var cio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; var el = e.target, target = parseFloat(el.getAttribute('data-count')), t0 = null; requestAnimationFrame(function step(ts) { if (!t0) t0 = ts; var p = Math.min((ts - t0) / 1400, 1), eased = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(target * eased); if (p < 1) requestAnimationFrame(step); }); cio.unobserve(el); }); }, { threshold: 0.5 });
     stats.forEach(function (s) { cio.observe(s); });
   }
 
