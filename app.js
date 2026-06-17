@@ -50,8 +50,8 @@
           x = nx; y = ny;
           var px = cx + x * s, py = cy + y * s;
           var g = (x + 2) / 4; // 0..1 → gold→violet
-          ctx.fillStyle = 'rgba(' + Math.round(231 - g * 63) + ',' + Math.round(183 - g * 60) + ',' + Math.round(101 + g * 154) + ',0.72)';
-          ctx.fillRect(px, py, 1.4 * DPR, 1.4 * DPR);
+          ctx.fillStyle = 'rgba(' + Math.round(231 - g * 63) + ',' + Math.round(183 - g * 60) + ',' + Math.round(101 + g * 154) + ',0.58)';
+          ctx.fillRect(px, py, 1.3 * DPR, 1.3 * DPR);
         }
       }
       return {
@@ -108,9 +108,9 @@
         for (var k = 0; k < 6; k++) {
           var s = base * scale * Math.pow(0.5, k);
           if (s < 4 || s > Math.max(W, H)) continue;
-          var alpha = Math.min(1, s / base) * 0.72;
+          var alpha = Math.min(1, s / base) * 0.58;
           ctx.strokeStyle = k % 2 ? 'rgba(168,123,255,' + alpha + ')' : 'rgba(231,183,101,' + alpha + ')';
-          ctx.lineWidth = 1.5 * DPR;
+          ctx.lineWidth = 1.4 * DPR;
           // hexagonal fractal node ring
           ctx.beginPath();
           for (var a = 0; a <= 6; a++) { var ang = a / 6 * TAU; var px = cx + Math.cos(ang) * s, py = cy + Math.sin(ang) * s; a ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
