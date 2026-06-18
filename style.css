@@ -371,3 +371,13 @@ footer.site .legal { margin-top: 44px; padding-top: 26px; border-top: 1px solid 
   .attractor-sec { min-height: 78vh; }
   #tree { opacity: 0.28; }
 }
+
+/* language switcher (re-added for fr/es/de) */
+.lang { position: relative; }
+.lang summary { list-style: none; cursor: pointer; font-family: var(--fs-mono); font-size: 12px; color: var(--ink-60); display: flex; align-items: center; gap: 5px; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover { color: var(--ink); }
+.lang ul { position: absolute; right: 0; top: 150%; list-style: none; background: var(--void-2); border: 1px solid var(--line-2); border-radius: 12px; padding: 6px; min-width: 140px; box-shadow: 0 18px 40px rgba(0,0,0,0.5); z-index: 80; }
+.lang li a { display: block; padding: 9px 12px; font-size: 14px; border-radius: 8px; color: var(--ink-60); }
+.lang li a:hover { background: var(--surface); color: var(--ink); }
+@media (max-width: 680px) { .lang ul { right: auto; left: 0; } }

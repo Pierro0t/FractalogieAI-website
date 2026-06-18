@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
+
+  <title>Fractalogie — Ve el patrón que hay debajo de tu vida</title>
+  <meta name="description" content="Fractalogie es una app de autorreflexión guiada por IA para iOS. Describe una situación que se repite y observa cómo emerge el bucle oculto que dirige tu vida: su detonante, tu reacción, la emoción y el precio que pagas." />
+  <meta name="keywords" content="app de autorreflexión, diario con IA, patrones recurrentes, introspección, crecimiento personal, fractalogie, patrones de identidad, atención plena" />
+  <link rel="canonical" href="https://fractalogie.ai/es/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fractalogie.ai/es/" />
+  <meta property="og:title" content="Fractalogie — Ve el patrón que hay debajo de tu vida" />
+  <meta property="og:description" content="Un espejo guiado por IA. Saca a la luz el único bucle recurrente que organiza tu vida en silencio." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractalogie — Ve el patrón que hay debajo de tu vida" />
+  <meta name="twitter:description" content="Un espejo guiado por IA. Saca a la luz el único bucle recurrente que organiza tu vida en silencio." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fractalogie","description":"Una app de autorreflexión guiada por IA que saca a la luz el bucle recurrente que organiza tu vida.","url":"https://fractalogie.ai","applicationCategory":"LifestyleApplication","operatingSystem":"iOS","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":["en","fr","es","de"]}
+  </script>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">Cómo funciona</a>
+        <a href="features.html">Funciones</a>
+        <a href="philosophy.html">Filosofía</a>
+        <a href="pricing.html">Precios</a>
+        <details class="lang">
+          <summary>ES ▾</summary>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="../fr/index.html">Français</a></li>
+            <li><a href="index.html">Español</a></li>
+            <li><a href="../de/index.html">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="#get">Consigue la app</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menú">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <canvas id="tree" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="pill reveal"><span class="dot"></span> Muy pronto · iOS</span>
+          <h1 class="reveal" data-d="1">Ve el <span class="grad italic">patrón</span> que hay debajo de tu vida</h1>
+          <p class="sub reveal" data-d="2">Fractalogie es un espejo guiado por IA. Nombra una situación que se repite una y otra vez, describe un único momento de ella, y observa cómo emerge el bucle oculto que hay debajo: su detonante, tu reacción, la emoción que protege y el precio que sigues pagando.</p>
+          <div class="badges reveal" data-d="3">
+            <span class="store dim">
+              <span class="soon">Pronto</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+              <span class="st"><small>Muy pronto en la</small><b>App Store</b></span>
+            </span>
+            <span class="store dim">
+              <span class="soon">Pronto</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+              <span class="st"><small>En construcción para</small><b>Google Play</b></span>
+            </span>
+          </div>
+          <p class="hero-note reveal" data-d="4">Sin cuenta · solo texto · sin rastreo</p>
+        </div>
+
+        <div class="hero-device reveal" data-d="2">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/01-hero.jpg" alt="App Fractalogie" loading="eager" />
+          </div>
+          <div class="float-tag ft-1"><span class="k">◆</span> detonante → reacción</div>
+          <div class="float-tag ft-2"><span class="k">✦</span> un bucle, revelado</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>la misma discusión</span><span>la misma huida</span><span>el mismo silencio</span><span>el mismo miedo</span><span>el mismo bucle</span><span>el mismo precio</span>
+      <span>la misma discusión</span><span>la misma huida</span><span>el mismo silencio</span><span>el mismo miedo</span><span>el mismo bucle</span><span>el mismo precio</span>
+    </div>
+  </div>
+
+  <!-- ═══ PROBLEM ═══ -->
+  <section id="problem">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">La premisa</span>
+        <h2>Siempre acabas en el <span class="grad">mismo lugar</span></h2>
+        <p>Personas distintas, trabajos distintos, años distintos — y de algún modo se repite la misma escena. Eso no es mala suerte. Es una estructura. Fractalogie la hace visible.</p>
+      </div>
+      <div class="stats reveal" data-d="1">
+        <div class="stat"><div class="v"><span data-count="1">1</span></div><div class="l">escaneo gratis para empezar</div></div>
+        <div class="stat"><div class="v">∞</div><div class="l">bucles por descifrar</div></div>
+        <div class="stat"><div class="v"><span data-count="0">0</span></div><div class="l">rastreadores · jamás</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">El escaneo</span>
+        <h2>Cuatro pasos, un bucle</h2>
+        <p>No rellenas formularios. Tienes una conversación breve y precisa con un espejo que solo sigue un hilo.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><h3>Nómbralo</h3><p>Elige una situación que se repite una y otra vez y te frena en silencio.</p></div>
+        <div class="step reveal" data-d="1"><div class="num">02</div><h3>Descríbelo una vez</h3><p>Cuéntale una ocasión reciente en que ocurrió, con tus propias palabras.</p></div>
+        <div class="step reveal" data-d="2"><div class="num">03</div><h3>Mírate reflejado</h3><p>Una IA en vivo hace una pregunta precisa cada vez, sacando a la luz el detonante, la reacción, la emoción y el precio.</p></div>
+        <div class="step reveal" data-d="3"><div class="num">04</div><h3>Ve la estructura</h3><p>Tu bucle cristaliza en un único motivo — y la lógica oculta que lo mantiene en marcha.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STICKY SHOWCASE ═══ -->
+  <section class="showcase">
+    <div class="wrap">
+      <div class="showcase-inner">
+        <div class="showcase-sticky">
+          <div class="showcase-phone">
+            <div class="device">
+              <div class="device-glow"></div>
+              <div class="showcase-shot on" data-i="0"><img src="shots/02-scan.jpg" alt="Escaneo guiado" /></div>
+              <div class="showcase-shot" data-i="1"><img src="shots/03-insights.jpg" alt="Revelaciones" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="2"><img src="shots/04-map.jpg" alt="Mapa fractal" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="3"><img src="shots/05-evolution.jpg" alt="Panel de evolución" loading="lazy" /></div>
+              <div class="showcase-shot" data-i="4"><img src="shots/06-reconstruction.jpg" alt="Reconstrucción" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-steps">
+          <div class="sc-step on" data-i="0"><div class="idx">01 / 05</div><h3>Un escaneo guiado lee lo que no puedes ver</h3><p>Una conversación serena y en vivo que hace una pregunta desestabilizadora cada vez — nunca un aluvión, nunca consejos.</p></div>
+          <div class="sc-step" data-i="1"><div class="idx">02 / 05</div><h3>Cada escaneo devuelve una revelación nítida</h3><p>Una revelación clara, no un feed por el que deslizarte. El Espejo nombra una repetición que aún no habías puesto en palabras.</p></div>
+          <div class="sc-step" data-i="2"><div class="idx">03 / 05</div><h3>Cada bucle conduce a un único atractor</h3><p>Tu mapa personal muestra cómo las relaciones, el dinero, el trabajo y el cuerpo siguen todos la misma estructura.</p></div>
+          <div class="sc-step" data-i="3"><div class="idx">04 / 05</div><h3>Observa la arquitectura de en quién te estás convirtiendo</h3><p>Los motivos y revelaciones guardados construyen una imagen viva de tu estructura, que evoluciona con cada escaneo.</p></div>
+          <div class="sc-step" data-i="4"><div class="idx">05 / 05</div><h3>No te limites a ver el patrón — reescríbelo</h3><p>Cuando ver no basta, una reconstrucción privada 1:1 reorganiza la identidad que genera el bucle.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STRANGE ATTRACTOR ═══ -->
+  <section class="attractor-sec">
+    <canvas id="attractor"></canvas>
+    <div class="attractor-copy reveal">
+      <span class="eyebrow">El atractor</span>
+      <h2 data-decode>Cada bucle conduce a un único atractor</h2>
+      <p>Las relaciones, el dinero, el trabajo, el cuerpo — no son muchos problemas. Una sola identidad, que los organiza todos en silencio. Esta es la forma que revela el mapa.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURES ═══ -->
+  <section id="features">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Lo que recibes</span>
+        <h2>Un espejo, no consejos</h2>
+        <p>Fractalogie no te dice qué hacer. Revela la arquitectura que ya estás ejecutando — para que la consciencia haga el resto.</p>
+      </div>
+      <div class="features">
+        <div class="feature reveal"><div class="ic">◇</div><h3>El motivo fractal</h3><p>«Cuando ___, yo ___, porque siento ___, y esto lleva a ___.» Una sola frase que nombra el bucle detrás del ruido.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⟳</div><h3>Lógica oculta e inversión</h3><p>Lo que el patrón protege, lo que cuesta, y la inversión desestabilizadora que afloja su agarre.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">✦</div><h3>Tu mapa personal</h3><p>Guarda motivos y revelaciones en un mapa vivo de tu estructura que crece con cada escaneo.</p></div>
+        <div class="feature reveal"><div class="ic">∞</div><h3>Escaneos ilimitados</h3><p>Con el Acceso Fundador, descifra todos los bucles que quieras — en relaciones, dinero, trabajo y cuerpo.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⌖</div><h3>Privado por diseño</h3><p>Sin anuncios, sin rastreadores, sin corredores de datos. Úsalo sin cuenta; borra todo con un solo toque.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">⟡</div><h3>Tuyo, en todas partes</h3><p>Inicia sesión para sincronizar tus escaneos de forma segura entre dispositivos. Inglés, francés, español y alemán.</p></div>
+      </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="features.html">Explora todas las funciones →</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ FRACTAL ZOOM (scroll) ═══ -->
+  <section class="fzoom">
+    <div class="fzoom-sticky">
+      <canvas id="fzoom"></canvas>
+      <div class="fzoom-copy">
+        <span class="eyebrow">Zoom fractal</span>
+        <h2 data-decode>Una estructura, en cada escala</h2>
+        <p>Acércate, aléjate — la misma forma regresa. No es casualidad. Es la firma de una sola estructura, que se repite en cada ámbito de tu vida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE METHOD (arc) ═══ -->
+  <section id="method">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">El método</span>
+        <h2>Cómo se <span class="grad-v italic">deshace</span> un bucle</h2>
+        <p>Fractalogie sigue una secuencia estricta. Sin saltar nada, sin mezclar nada — un bucle, hasta el fondo.</p>
+      </div>
+      <div class="arc">
+        <div class="arc-row reveal"><div class="n">01</div><div><h3>El cuadrante fractal</h3><p>Detonante, reacción, emoción, precio — las cuatro esquinas del bucle, sacadas a la luz con tus propias palabras.</p></div></div>
+        <div class="arc-row reveal"><div class="n">02</div><div><h3>La lógica oculta</h3><p>De qué te protege el patrón y el riesgo emocional que te ayuda a evitar en silencio.</p></div></div>
+        <div class="arc-row reveal"><div class="n">03</div><div><h3>La inversión</h3><p>«No es el miedo al rechazo lo que crea la distancia — es la distancia lo que mantiene vivo el miedo.» La reacción que pretende protegerte es justo lo que mantiene el bucle.</p></div></div>
+        <div class="arc-row reveal"><div class="n">04</div><div><h3>El zoom fractal</h3><p>La misma estructura, hallada de nuevo en otro ámbito. No son muchos problemas — uno solo, que se repite.</p></div></div>
+        <div class="arc-row reveal"><div class="n">05</div><div><h3>La identidad atractora</h3><p>«Soy alguien que ___.» La autodefinición que todo el bucle se ha organizado para proteger.</p></div></div>
+      </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="philosophy.html">Lee la filosofía →</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ THE REVERSAL ═══ -->
+  <section class="reversal-sec">
+    <div class="wrap">
+      <div class="shead reveal" style="margin-bottom:36px;"><span class="eyebrow">La inversión</span></div>
+      <div class="reversal reveal">
+        <div class="rev-a">No es el <em class="grad">miedo</em> al rechazo lo que crea la distancia.</div>
+        <div class="rev-b">Es la <em class="grad-v">distancia</em> lo que mantiene vivo el miedo.</div>
+      </div>
+      <p class="center reveal" style="color:var(--ink-40);margin-top:40px;font-size:15px;">El problema percibido a menudo mantiene el patrón. Fractalogie lo da la vuelta del revés.</p>
+    </div>
+  </section>
+
+  <!-- ═══ BEYOND ═══ -->
+  <section>
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Más allá de la app</span>
+        <h2>Cuando ver no basta</h2>
+        <p>La app revela la estructura. Una reconstrucción privada 1:1 es donde la reorganizas — en la raíz. Solicítala si un bucle se sigue repitiendo y estás listo para cambiar la identidad que lo genera.</p>
+        <a class="btn btn-ghost" href="mailto:contact@fractalogie.ai?subject=Reconstrucci%C3%B3n%20de%20identidad">Solicita una llamada privada</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Precios</span>
+        <h2>Empieza gratis</h2>
+        <p>Tu primer escaneo corre por nuestra cuenta. El Acceso Fundador desbloquea la experiencia completa.</p>
+      </div>
+      <div class="price-grid">
+        <div class="plan reveal">
+          <span class="tag">Gratis</span>
+          <div class="amt">0 €</div>
+          <p class="sub">Un escaneo completo</p>
+          <ul><li>Tu primer motivo fractal</li><li>Sin cuenta requerida</li><li>Solo texto · sin rastreo</li></ul>
+        </div>
+        <div class="plan reveal" data-d="1">
+          <span class="tag">Mensual</span>
+          <div class="amt">9,99 €<small> / mes</small></div>
+          <p class="sub">Acceso completo, facturado cada mes</p>
+          <ul><li>Escaneos fractales ilimitados</li><li>Mapa personal e historial completos</li><li>Sincronización en la nube entre dispositivos</li><li>Cancela cuando quieras</li></ul>
+        </div>
+        <div class="plan featured reveal" data-d="2">
+          <span class="tag">Anual · mejor valor</span>
+          <div class="amt">59,99 €<small> / año</small></div>
+          <p class="sub">≈ 5 € / mes · ahorra un 50 %</p>
+          <ul><li>Todo lo del plan Mensual</li><li>Dos meses gratis frente al mensual</li><li>Cancela cuando quieras en los ajustes de la App Store</li></ul>
+        </div>
+      </div>
+      <p class="center" style="margin-top:22px;color:var(--ink-25);font-size:13px;">Se renueva automáticamente hasta que lo canceles. El precio exacto se muestra en la app antes de comprar, en tu moneda local.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="shead reveal"><span class="eyebrow">Preguntas</span><h2>Bueno saberlo</h2></div>
+      <div class="faq reveal">
+        <details class="qa"><summary>¿Fractalogie es terapia?<span class="chev">＋</span></summary><div class="a">No. Fractalogie es una herramienta de autorreflexión — no terapia, atención médica ni tratamiento de salud mental. No diagnostica ni trata nada, y no sustituye a un profesional cualificado. Si estás pasando por un momento de angustia, contacta con un profesional o con el número de emergencias de tu zona.</div></details>
+        <details class="qa"><summary>¿Qué ocurre con lo que escribo?<span class="chev">＋</span></summary><div class="a">El texto de tu escaneo se envía de forma segura a la API de OpenAI para generar tu análisis, y nunca se usa para entrenar modelos. Sin cuenta, permanece en tu dispositivo; con cuenta, se guarda de forma privada (Supabase) para sincronizarse entre dispositivos. No vendemos nada ni hacemos rastreo. Consulta nuestra <a href="privacy.html">Política de Privacidad</a>.</div></details>
+        <details class="qa"><summary>¿Necesito una cuenta?<span class="chev">＋</span></summary><div class="a">No. El núcleo de la app funciona sin ella. Iniciar sesión (Apple o Google) simplemente activa la sincronización en la nube. Puedes eliminar tu cuenta y todos los datos en la nube con un solo toque desde la app.</div></details>
+        <details class="qa"><summary>¿Qué plataformas e idiomas?<span class="chev">＋</span></summary><div class="a">Fractalogie llega a iOS (Android muy pronto), en inglés, francés, español y alemán. La interfaz y cada análisis siguen el idioma que elijas.</div></details>
+        <details class="qa"><summary>¿Cómo funciona la facturación?<span class="chev">＋</span></summary><div class="a">Tu primer escaneo es gratis. El Acceso Fundador es una suscripción de renovación automática comprada a través de Apple (59,99 €/año o 9,99 €/mes); el precio se muestra antes de comprar. Se renueva salvo que la canceles al menos 24 h antes de que termine el periodo — gestiónala cuando quieras en los ajustes de tu App Store.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section id="get">
+    <div class="wrap wrap-sm">
+      <div class="cta-final reveal">
+        <span class="eyebrow">Muy pronto</span>
+        <h2>Ve el <span class="grad italic">patrón</span></h2>
+        <p>Sé el primero en saberlo cuando Fractalogie llegue. Un escaneo es gratis — sin cuenta, sin rastreo, sin ruido.</p>
+        <div class="badges" style="justify-content:center;">
+          <span class="store dim">
+            <span class="soon">Pronto</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Muy pronto en la</small><b>App Store</b></span>
+          </span>
+          <span class="store dim">
+            <span class="soon">Pronto</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>En construcción para</small><b>Google Play</b></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">Un espejo guiado por IA para los patrones que organizan tu vida en silencio.</p>
+        </div>
+        <div class="fcol">
+          <h4>Producto</h4>
+          <a href="how-it-works.html">Cómo funciona</a>
+          <a href="features.html">Funciones</a>
+          <a href="philosophy.html">Filosofía</a>
+          <a href="pricing.html">Precios</a>
+        </div>
+        <div class="fcol">
+          <h4>Legal</h4>
+          <a href="privacy.html">Política de Privacidad</a>
+          <a href="terms.html">Términos de Uso</a>
+          <a href="support.html">Soporte</a>
+        </div>
+        <div class="fcol">
+          <h4>Contacto</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="support.html">Ayuda y FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. Todos los derechos reservados.</span>
+        <span>Hecho con cuidado · iOS — Android pronto</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js" defer></script>
+</body>
+</html>

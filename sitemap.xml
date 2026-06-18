@@ -1,11 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fractalogie.ai/</loc><priority>1.0</priority></url>
-  <url><loc>https://fractalogie.ai/how-it-works</loc><priority>0.8</priority></url>
-  <url><loc>https://fractalogie.ai/features</loc><priority>0.8</priority></url>
-  <url><loc>https://fractalogie.ai/philosophy</loc><priority>0.7</priority></url>
-  <url><loc>https://fractalogie.ai/pricing</loc><priority>0.8</priority></url>
-  <url><loc>https://fractalogie.ai/support</loc><priority>0.5</priority></url>
-  <url><loc>https://fractalogie.ai/privacy</loc><priority>0.4</priority></url>
-  <url><loc>https://fractalogie.ai/terms</loc><priority>0.4</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fractalogie.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/how-it-works"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/how-it-works"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/how-it-works"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/how-it-works"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/features"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/features"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/features"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/features"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/features"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/features"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/features"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/features"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/philosophy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/philosophy"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/philosophy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/philosophy"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/philosophy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/philosophy"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/philosophy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/philosophy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/philosophy"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/pricing"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/pricing"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/pricing"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/pricing"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/support"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/support"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/support"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/support"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/privacy"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/privacy"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/privacy"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/privacy"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/terms"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/terms"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/es/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/terms"/>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://fractalogie.ai/de/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fractalogie.ai/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fractalogie.ai/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fractalogie.ai/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fractalogie.ai/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fractalogie.ai/terms"/>
+    <priority>0.4</priority>
+  </url>
 </urlset>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05060e" />
+  <title>Politique de confidentialité — Fractalogie</title>
+  <meta name="description" content="Comment Fractalogie collecte, utilise et protège tes données. Tes scans t'appartiennent." />
+  <link rel="canonical" href="https://fractalogie.ai/fr/privacy" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">Comment ça marche</a>
+        <a href="features.html">Fonctionnalités</a>
+        <a href="philosophy.html">Philosophie</a>
+        <a href="pricing.html">Tarifs</a>
+        <details class="lang">
+          <summary>FR ▾</summary>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="index.html">Français</a></li>
+            <li><a href="../es/index.html">Español</a></li>
+            <li><a href="../de/index.html">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="index.html#get">Obtenir l'app</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <a class="back" href="index.html">← fractalogie.ai</a>
+    <div class="eyebrow" style="margin-top:24px;">Fractalogie</div>
+    <h1>Politique de confidentialité</h1>
+    <p class="meta">Dernière mise à jour : 15 juin 2026</p>
+
+    <p>Fractalogie (« l'app », « nous ») est un outil d'introspection guidé par l'IA. Ce que tu écris pendant un scan est personnel et souvent intime — cette page explique exactement ce que nous collectons, ce que nous en faisons, et comment tu gardes le contrôle. La version courte : <strong>tes scans t'appartiennent, nous ne vendons rien, et tu peux tout effacer d'un seul geste.</strong></p>
+
+    <h2>1. Ce que nous collectons</h2>
+    <ul>
+      <li><strong>Données de compte</strong> (seulement si tu te connectes) : ton nom et ton adresse e-mail, fournis par la connexion Apple ou Google. Tu peux utiliser le cœur de l'app sans compte.</li>
+      <li><strong>Contenu des scans</strong> : le texte que tu écris pendant un scan (tes réponses, les situations que tu décris) et l'analyse générée à partir de celui-ci.</li>
+      <li><strong>Statut d'abonnement</strong> : si un abonnement est actif, géré par RevenueCat et Apple. Nous ne voyons ni ne stockons jamais tes informations de paiement.</li>
+      <li><strong>Données techniques de base</strong> : la langue et la version de l'app, utilisées pour faire fonctionner l'app. Nous n'effectuons aucune publicité ni aucun pistage inter-apps.</li>
+    </ul>
+
+    <h2>2. Comment le contenu de tes scans est traité</h2>
+    <p>Pour générer ton analyse, le texte que tu écris pendant un scan est envoyé en sécurité à l'<strong>API d'OpenAI</strong>. Conformément aux conditions de l'API d'OpenAI, ces données ne sont <strong>pas utilisées pour entraîner leurs modèles</strong>. L'analyse est renvoyée à ton appareil. Ce que tu saisis est aussi passé par une étape de modération automatisée afin de garder l'expérience sûre.</p>
+    <ul>
+      <li><strong>Sans compte</strong> : le résultat de ton scan est stocké uniquement sur ton appareil.</li>
+      <li><strong>Avec un compte</strong> : tes scans sont stockés dans notre base de données (hébergée par <strong>Supabase</strong>) afin de se synchroniser sur tes appareils. L'accès est restreint à ton compte par sécurité au niveau des lignes.</li>
+    </ul>
+
+    <h2>3. Ce que nous ne faisons jamais</h2>
+    <ul>
+      <li>Nous ne vendons ni ne louons jamais tes données.</li>
+      <li>Nous ne partageons jamais le contenu de tes scans avec des annonceurs ou des courtiers en données.</li>
+      <li>Nous n'utilisons jamais le contenu de tes scans pour entraîner des modèles d'IA.</li>
+    </ul>
+
+    <h2>4. Supprimer tes données</h2>
+    <p>Dans l'app : <strong>Moi → supprimer mon compte</strong>. Cela efface définitivement ton compte et chaque scan stocké dans le cloud, immédiatement. Les scans stockés uniquement sur ton appareil sont supprimés en désinstallant l'app.</p>
+
+    <h2>5. Tes droits</h2>
+    <p>En vertu du RGPD et des lois équivalentes, tu peux accéder à tes données personnelles, les corriger, les exporter ou les effacer, et t'opposer à leur traitement ou le limiter. La plupart de ces actions sont disponibles directement dans l'app ; pour tout le reste, écris-nous et nous répondrons dans un délai de 30 jours.</p>
+
+    <h2>6. Conservation &amp; sécurité</h2>
+    <p>Les scans cloud sont conservés jusqu'à ce que tu les supprimes, toi ou ton compte. Les données sont chiffrées en transit (TLS) et au repos par nos hébergeurs. Aucune méthode de stockage n'est sûre à 100 %, mais l'accès aux données de production est strictement limité.</p>
+
+    <h2>7. Enfants</h2>
+    <p>Fractalogie ne s'adresse pas aux enfants et n'est pas destiné aux utilisateurs de moins de 16 ans.</p>
+
+    <h2>8. Modifications</h2>
+    <p>Si cette politique change de façon importante, nous mettrons cette page à jour et le signalerons dans l'app. La date de « dernière mise à jour » ci-dessus reflète toujours la version en vigueur.</p>
+
+    <h2>9. Contact</h2>
+    <p>Responsable du traitement : Fractalogie.<br />E-mail : <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie.</span>
+        <span><a href="privacy.html">Confidentialité</a> · <a href="terms.html">Conditions</a> · <a href="support.html">Assistance</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="../app.js" defer></script>
+</body>
+</html>

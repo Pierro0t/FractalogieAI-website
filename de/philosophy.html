@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
+
+  <title>Die Philosophie — Fractalogie</title>
+  <meta name="description" content="Der Gedanke hinter Fractalogie: Du bist nicht deine Probleme – du bist die Struktur, die sie immer wieder erzeugt. Wiederholung ist strukturell, jedes Muster schützt etwas, und dieselbe Schleife wiederholt sich über jeden Maßstab deines Lebens." />
+  <meta name="keywords" content="Selbstreflexion, wiederkehrende Muster, Identitäts-Attraktor, fraktale Psychologie, strukturelle Wiederholung, Introspektion, fractalogie Philosophie" />
+  <link rel="canonical" href="https://fractalogie.ai/de/philosophy" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fractalogie.ai/de/philosophy" />
+  <meta property="og:title" content="Die Philosophie — Fractalogie" />
+  <meta property="og:description" content="Du bist nicht deine Probleme. Du bist die Struktur, die sie immer wieder erzeugt. Der Gedanke hinter Fractalogie – ein Spiegel, kein Coach." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Die Philosophie — Fractalogie" />
+  <meta name="twitter:description" content="Du bist nicht deine Probleme. Du bist die Struktur, die sie immer wieder erzeugt." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/01-hero.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* philosophy — quiet, spacious editorial accents (mobile-first) */
+    .phi-hero { padding: 92px 0 40px; text-align: center; }
+    .phi-hero h1 { font-size: clamp(38px, 7vw, 84px); max-width: 18ch; margin: 24px auto 0; }
+    .phi-lede { color: var(--ink-60); font-size: clamp(17px, 2.2vw, 21px); max-width: 50ch; margin: 30px auto 0; }
+    .prose { max-width: 660px; margin: 0 auto; }
+    .prose h2 { font-size: clamp(30px, 5vw, 50px); margin-bottom: 22px; }
+    .prose p { color: var(--ink-60); font-size: clamp(16px, 2vw, 18.5px); margin-bottom: 18px; line-height: 1.7; }
+    .prose p:last-child { margin-bottom: 0; }
+    .phi-eyebrow { display: inline-block; margin-bottom: 18px; }
+    .phi-device-row { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; max-width: 920px; margin: 0 auto; }
+    .phi-device-row .device { margin: 0 auto; }
+    .phi-aside p { color: var(--ink-60); font-size: clamp(16px, 2vw, 18.5px); line-height: 1.7; margin-bottom: 18px; }
+    .phi-aside p:last-child { margin-bottom: 0; }
+    section.phi-tight { padding: 72px 0; }
+    .disclaimer { max-width: 760px; margin: 0 auto; border: 1px solid rgba(231,183,101,0.3); background: rgba(231,183,101,0.06); border-radius: var(--r); padding: clamp(26px, 4vw, 40px); }
+    .disclaimer .eyebrow { display: inline-block; margin-bottom: 16px; }
+    .disclaimer h2 { font-size: clamp(24px, 3.4vw, 34px); margin-bottom: 16px; }
+    .disclaimer p { color: var(--ink-80); font-size: 15.5px; line-height: 1.7; margin-bottom: 12px; }
+    .disclaimer p:last-child { margin-bottom: 0; }
+    .disclaimer strong { color: var(--ink); }
+    @media (min-width: 860px) {
+      .phi-device-row { grid-template-columns: 0.9fr 1.1fr; gap: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">So funktioniert's</a>
+        <a href="features.html">Funktionen</a>
+        <a href="philosophy.html">Philosophie</a>
+        <a href="pricing.html">Preise</a>
+        <details class="lang">
+          <summary>DE ▾</summary>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="../fr/index.html">Français</a></li>
+            <li><a href="../es/index.html">Español</a></li>
+            <li><a href="index.html">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="#get">App holen</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menü">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ OPENING ═══ -->
+  <header class="phi-hero">
+    <div class="wrap">
+      <span class="eyebrow phi-eyebrow reveal">Die Philosophie</span>
+      <h1 class="reveal" data-d="1">Du bist nicht deine Probleme. Du bist die <span class="grad italic">Struktur</span>, die sie immer wieder erzeugt.</h1>
+      <p class="phi-lede reveal" data-d="2">Ein stiller Gedanke liegt unter allem, was Fractalogie tut: Die Situationen, die immer wiederkehren, sind keine Zufälle der Umstände. Sie sind die sichtbare Oberfläche einer Struktur – und eine Struktur kann gesehen werden.</p>
+    </div>
+  </header>
+
+  <!-- ═══ REPETITION ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="prose reveal">
+        <span class="eyebrow phi-eyebrow">Wiederholung</span>
+        <h2>Dieselbe Szene kehrt zurück, weil etwas <span class="grad italic">geschützt</span> wird.</h2>
+        <p>Wiederholung ist strukturell, nicht zufällig. Wenn derselbe Streit, derselbe Abgang, dieselbe Stille immer wieder eintrifft – durch andere Menschen, andere Jahre, andere Leben – dann ist das kein sich anhäufendes Pech. Es ist ein System, das genau das tut, wofür es gebaut wurde.</p>
+        <p>Ein Muster, das sich so verlässlich wiederholt, ist kein Fehler in der Maschine. Es ist die Maschine. Die Szene kehrt zurück, weil das Zurückkehren etwas intakt hält.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OPTIMISATION ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="prose reveal">
+        <span class="eyebrow phi-eyebrow">Optimierung</span>
+        <h2>Jedes Muster ist eine energetische <span class="grad-v italic">Optimierung</span>.</h2>
+        <p>Nichts, was du zweimal tust, ist bedeutungslos. Jedes Muster bewahrt Stabilität und minimiert emotionale Verletzlichkeit – es verbraucht die geringstmögliche Energie, um dich vor einem Gefühl zu schützen, dem du lieber nicht direkt begegnest.</p>
+        <p>Deshalb sind Muster so schwer „einfach zu stoppen“. Sie sind keine Fehler, die korrigiert werden müssen. Sie sind elegante Lösungen für ein Problem, das du vielleicht nie benannt hast – Lösungen, die funktionieren, zu einem Preis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE FRACTAL (with device accent) ═══ -->
+  <section>
+    <div class="wrap">
+      <div class="phi-device-row">
+        <div class="reveal" data-d="1">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/01-hero.jpg" alt="Fractalogie App" loading="lazy" />
+          </div>
+        </div>
+        <div class="phi-aside reveal">
+          <span class="eyebrow phi-eyebrow">Das Fraktal</span>
+          <h2 style="font-size:clamp(30px,5vw,50px);margin-bottom:22px;">Eine Form, die sich über jeden <span class="grad italic">Maßstab</span> wiederholt.</h2>
+          <p>Dieselbe Struktur taucht in deinen Beziehungen, deinem Geld, deinem Körper, deiner Arbeit, deinem Gefühl dafür, wer du bist, auf. Zoom aus einem heraus und du findest ihren Zwilling irgendwo anders – dieselbe Schleife in einem anderen Kostüm.</p>
+          <p>Das ist das Fraktal: nicht viele separate Probleme, sondern eine einzige Struktur, die in jedem Maßstab eines Lebens nachhallt. Löse sie als fünf Probleme und sie wächst nach. Sieh sie als eine Form und sie hält endlich still.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PULL-QUOTE: IDENTITY ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Identität als Attraktor</span>
+        <h2>„Ich bin jemand, der ___“ <span class="grad-v italic">organisiert</span> still die Realität, um wahr zu bleiben.</h2>
+        <p>Identität verhält sich wie ein Attraktor: ein Schwerpunkt, der Ereignisse in eine vertraute Umlaufbahn zurückzieht. Was auch immer du entschieden hast zu sein, die Realität wird immer wieder so arrangiert, dass sie es bestätigt – weil konsistent zu sein sich sicherer anfühlt als frei zu sein.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AWARENESS ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="prose reveal">
+        <span class="eyebrow phi-eyebrow">Bewusstsein</span>
+        <h2>Die Schleife genau zu sehen ist das, was sie <span class="grad italic">lockert</span>.</h2>
+        <p>Bewusstsein destabilisiert Muster. In dem Moment, in dem eine Schleife klar gesehen wird – ihr Auslöser, ihre Reaktion, die Emotion, die sie bewacht, der Preis, den sie verlangt – verliert sie etwas von ihrem automatischen Griff. Du kannst dasselbe Programm nicht mehr ganz auf dieselbe Weise laufen lassen, nachdem du ihm beim Laufen zugesehen hast.</p>
+        <p>Aber seien wir ehrlich über die Grenze: Verstehen ist nicht Transformation. Einsicht ist keine Heilung. Die Struktur zu benennen ist der Anfang, nicht das Ende – es ist das, was Veränderung möglich macht, nicht das, was sie garantiert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ A MIRROR ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="prose reveal">
+        <span class="eyebrow phi-eyebrow">Die Haltung</span>
+        <h2>Ein Spiegel, kein <span class="grad-v italic">Coach</span>.</h2>
+        <p>Fractalogie motiviert dich nicht. Es moralisiert nicht, verschreibt keine Affirmationen und reicht dir keinen Fünf-Schritte-Plan. Es gibt keine Selbsthilfe-Stimme, die dir sagt, positiv zu denken oder es stärker zu versuchen.</p>
+        <p>Es spiegelt – präzise, geduldig, einen Faden nach dem anderen – bis die Struktur darunter für dich sichtbar wird. Ein Spiegel sagt dir nicht, was du mit dem tun sollst, was du siehst. Er weigert sich einfach, als Erster wegzuschauen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRINCIPLES (arc) ═══ -->
+  <section>
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Kurz gesagt</span>
+        <h2>Die ganze Idee, in <span class="grad italic">fünf</span> Zeilen</h2>
+        <p>Alles oben, destilliert zu den Prinzipien, denen die App bei jedem Scan folgt.</p>
+      </div>
+      <div class="arc">
+        <div class="arc-row reveal"><div class="n">01</div><div><h3>Du bist die Struktur</h3><p>Nicht die Probleme, die sie hervorbringt. Die Probleme sind Ausgabe; du bist das System.</p></div></div>
+        <div class="arc-row reveal"><div class="n">02</div><div><h3>Wiederholung ist strukturell</h3><p>Die Szene kehrt zurück, weil das Zurückkehren etwas schützt, das du noch nicht benannt hast.</p></div></div>
+        <div class="arc-row reveal"><div class="n">03</div><div><h3>Jedes Muster optimiert</h3><p>Es bewahrt Stabilität und minimiert Verletzlichkeit – eine elegante Lösung, zu einem Preis.</p></div></div>
+        <div class="arc-row reveal"><div class="n">04</div><div><h3>Die Form ist fraktal</h3><p>Dieselbe Schleife wiederholt sich über Liebe, Geld, Körper, Arbeit und Identität.</p></div></div>
+        <div class="arc-row reveal"><div class="n">05</div><div><h3>Sehen lockert sie</h3><p>Präzises Bewusstsein destabilisiert die Schleife – auch wenn Verstehen noch nicht Transformation ist.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DISCLAIMER ═══ -->
+  <section class="phi-tight">
+    <div class="wrap">
+      <div class="disclaimer reveal">
+        <span class="eyebrow">Bitte lesen</span>
+        <h2>Ein Werkzeug zur Reflexion – nicht mehr, und genau das ist der Punkt</h2>
+        <p>Fractalogie ist ein Werkzeug zur <strong>Selbstreflexion</strong>. Es ist keine Therapie, keine medizinische oder psychologische Behandlung und kein fachlicher Rat jeglicher Art. Es diagnostiziert, behandelt oder heilt nichts und ist kein Ersatz für eine qualifizierte Fachkraft.</p>
+        <p>Es ist außerdem <strong>kein Krisendienst</strong>. Wenn du in einer Krise bist, mit deiner psychischen Gesundheit kämpfst oder daran denkst, dir selbst zu schaden, verlass dich bitte nicht auf eine App – wende dich sofort an eine qualifizierte Fachkraft, jemanden, dem du vertraust, oder deine örtlichen Notdienste.</p>
+        <p>Was Fractalogie bietet, ist ein klarer, ruhiger Spiegel. Was du mit dem tust, was er spiegelt, gehört dir, und dir allein.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section id="get">
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Demnächst · iOS</span>
+        <h2>Sieh deine eigene <span class="grad italic">Struktur</span></h2>
+        <p>Benenne eine Situation, die sich immer wiederholt, beschreibe einen einzigen Moment davon und beobachte, wie die Form darunter auftaucht. Dein erster Scan ist kostenlos – kein Konto, kein Tracking.</p>
+        <div class="center" style="margin-bottom:30px;"><a class="btn btn-ghost" href="pricing.html">Preise ansehen →</a></div>
+        <div class="badges" style="justify-content:center;">
+          <span class="store dim">
+            <span class="soon">Bald</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Demnächst im</small><b>App Store</b></span>
+          </span>
+          <span class="store dim">
+            <span class="soon">Bald</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>In Arbeit für</small><b>Google Play</b></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">Ein KI-geführter Spiegel für die Muster, die dein Leben still organisieren.</p>
+        </div>
+        <div class="fcol">
+          <h4>Produkt</h4>
+          <a href="how-it-works.html">So funktioniert's</a>
+          <a href="features.html">Funktionen</a>
+          <a href="philosophy.html">Philosophie</a>
+          <a href="pricing.html">Preise</a>
+        </div>
+        <div class="fcol">
+          <h4>Rechtliches</h4>
+          <a href="privacy.html">Datenschutzerklärung</a>
+          <a href="terms.html">Nutzungsbedingungen</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="fcol">
+          <h4>Kontakt</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="support.html">Hilfe &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. Alle Rechte vorbehalten.</span>
+        <span>Mit Sorgfalt gemacht · iOS — Android bald</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js" defer></script>
+</body>
+</html>

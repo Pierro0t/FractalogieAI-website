@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
+
+  <title>Cómo funciona — Fractalogie</title>
+  <meta name="description" content="Cómo se deshace un bucle: nombra una situación que se repite, describe un único momento, mírate reflejado por una IA en vivo que hace una pregunta precisa cada vez — y observa cómo la estructura cristaliza en un único motivo." />
+  <meta name="keywords" content="cómo funciona, autorreflexión con IA, motivo fractal, lógica oculta, patrones recurrentes, introspección, fractalogie, escaneo guiado" />
+  <link rel="canonical" href="https://fractalogie.ai/es/how-it-works" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fractalogie.ai/es/how-it-works" />
+  <meta property="og:title" content="Cómo funciona — Fractalogie" />
+  <meta property="og:description" content="Una situación, unos minutos, un solo hilo. Mira exactamente cómo Fractalogie saca a la luz el bucle que corre en silencio bajo tu vida." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/02-scan.jpg" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo funciona — Fractalogie" />
+  <meta name="twitter:description" content="Una situación, unos minutos, un solo hilo. Mira exactamente cómo Fractalogie saca a la luz el bucle que corre en silencio bajo tu vida." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/02-scan.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ── Two-column device feature rows (page-local) ───────────────────── */
+    .twocol { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+    .twocol.flip .tc-media { order: 2; }
+    .tc-media { position: relative; display: flex; justify-content: center; }
+    .tc-copy .eyebrow { display: inline-block; margin-bottom: 18px; }
+    .tc-copy h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 20px; }
+    .tc-copy p { color: var(--ink-60); font-size: 17px; margin-bottom: 16px; max-width: 50ch; }
+    .tc-copy p:last-child { margin-bottom: 0; }
+    .tc-list { list-style: none; margin: 24px 0 0; display: grid; gap: 13px; }
+    .tc-list li { font-size: 15px; color: var(--ink-80); padding-left: 28px; position: relative; }
+    .tc-list li::before { content: '◆'; position: absolute; left: 0; top: 3px; color: var(--gold); font-size: 11px; }
+    .disclaimer { max-width: 720px; margin: 0 auto; text-align: center; }
+    .disclaimer .eyebrow { display: inline-block; margin-bottom: 18px; }
+    .disclaimer h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 18px; }
+    .disclaimer p { color: var(--ink-60); font-size: 16.5px; margin: 0 auto 16px; max-width: 60ch; }
+    .disclaimer .fine { font-family: var(--fs-mono); font-size: 12.5px; letter-spacing: 0.02em; color: var(--ink-40); max-width: 64ch; margin: 22px auto 0; line-height: 1.7; }
+    @media (max-width: 860px) {
+      .twocol { grid-template-columns: 1fr; gap: 44px; text-align: center; }
+      .twocol.flip .tc-media { order: 0; }
+      .tc-copy p, .tc-list { margin-left: auto; margin-right: auto; }
+      .tc-copy .eyebrow { margin-left: auto; margin-right: auto; }
+      .tc-list { display: inline-grid; text-align: left; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Cómo funciona Fractalogie","description":"Nombra una situación que se repite, describe un único momento, mírate reflejado por una IA en vivo que hace una pregunta precisa cada vez, y observa cómo el bucle cristaliza en un único motivo.","step":[{"@type":"HowToStep","name":"Nómbralo","text":"Elige una situación recurrente que te frena en silencio."},{"@type":"HowToStep","name":"Descríbelo una vez","text":"Cuéntale un momento real, con tus propias palabras."},{"@type":"HowToStep","name":"Mírate reflejado","text":"Una IA en vivo hace una pregunta precisa cada vez — detonante, reacción, emoción, precio."},{"@type":"HowToStep","name":"Ve la estructura","text":"El bucle cristaliza en una sola frase-motivo y su lógica oculta."}]}
+  </script>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">Cómo funciona</a>
+        <a href="features.html">Funciones</a>
+        <a href="philosophy.html">Filosofía</a>
+        <a href="pricing.html">Precios</a>
+        <details class="lang">
+          <summary>ES ▾</summary>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="../fr/index.html">Français</a></li>
+            <li><a href="index.html">Español</a></li>
+            <li><a href="../de/index.html">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="#get">Consigue la app</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menú">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="top">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Cómo funciona</span>
+        <h1 style="font-size:clamp(40px,6.4vw,72px);margin-bottom:22px;">Cómo se <span class="grad-v italic">deshace</span> un bucle</h1>
+        <p>Una situación. Unos minutos. Un solo hilo, seguido hasta el fondo — hasta que la estructura que dirige tu vida en silencio se convierte en algo que por fin puedes ver.</p>
+      </div>
+      <p class="center reveal" data-d="2" style="font-family:var(--fs-mono);font-size:11px;letter-spacing:0.05em;color:var(--ink-40);">Sin cuenta · solo texto · sin rastreo</p>
+    </div>
+  </section>
+
+  <!-- ═══ THE FOUR STEPS ═══ -->
+  <section id="steps" style="padding-top:0;">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">El escaneo</span>
+        <h2>Cuatro pasos, un bucle</h2>
+        <p>No rellenas formularios ni eliges entre menús. Tienes una conversación breve y precisa con un espejo que solo sigue un hilo.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><h3>Nómbralo</h3><p>Elige una situación que se repite una y otra vez — la discusión, la huida, el silencio — y te frena en silencio.</p></div>
+        <div class="step reveal" data-d="1"><div class="num">02</div><h3>Descríbelo una vez</h3><p>Cuéntale un momento real y reciente en que ocurrió. Sin teoría, sin diagnóstico — solo tus propias palabras.</p></div>
+        <div class="step reveal" data-d="2"><div class="num">03</div><h3>Mírate reflejado</h3><p>Una IA en vivo hace una pregunta precisa cada vez, sacando a la luz el detonante, tu reacción, la emoción y el precio.</p></div>
+        <div class="step reveal" data-d="3"><div class="num">04</div><h3>Ve la estructura</h3><p>El bucle cristaliza en una sola frase-motivo — y la lógica oculta que lo ha estado manteniendo en marcha.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE CONVERSATION (device row 1) ═══ -->
+  <section id="conversation">
+    <div class="wrap">
+      <div class="twocol">
+        <div class="tc-media reveal">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/02-scan.jpg" alt="El escaneo en vivo de Fractalogie, una pregunta cada vez" loading="lazy" />
+          </div>
+        </div>
+        <div class="tc-copy reveal" data-d="1">
+          <span class="eyebrow">La conversación</span>
+          <h2>Un espejo en vivo, <span class="grad italic">una pregunta</span> cada vez</h2>
+          <p>Esto no es un chatbot que te suelta un discurso. Es un espejo. Sereno y preciso, lee lo que escribiste y te lo devuelve — y luego hace la única pregunta que baja una capa más.</p>
+          <p>Nunca te inunda de opciones. Nunca moraliza ni reparte consejos. Hace una sola cosa, espera, y sigue tu respuesta — desestabilizando del modo más suave, porque solo nombra lo que ya está ahí.</p>
+          <ul class="tc-list">
+            <li>Una pregunta cada vez — nunca un muro de texto</li>
+            <li>Sereno y preciso, nunca clínico ni frío</li>
+            <li>Sin consejos, sin juicios, sin moralizar</li>
+            <li>Sigue tu hilo — nunca cambia de tema</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE REVELATION (device row 2) ═══ -->
+  <section id="revelation" style="padding-top:0;">
+    <div class="wrap">
+      <div class="twocol flip">
+        <div class="tc-media reveal">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/03-insights.jpg" alt="La revelación: motivo, lógica oculta e inversión" loading="lazy" />
+          </div>
+        </div>
+        <div class="tc-copy reveal" data-d="1">
+          <span class="eyebrow">La revelación</span>
+          <h2>Una revelación clara, <span class="grad-v italic">no un feed</span></h2>
+          <p>Cuando el hilo se completa, el espejo devuelve una única revelación nítida — no un feed interminable por el que deslizarte. Pone en una sola frase una repetición que llevabas años sintiendo pero nunca habías nombrado del todo.</p>
+          <p>Ves el motivo fractal, la lógica oculta que hay debajo, la inversión que afloja su agarre, y dónde se sitúa en tu mapa personal — la estructura bajo las relaciones, el dinero, el trabajo y el cuerpo.</p>
+          <ul class="tc-list">
+            <li>Tu motivo fractal, en una sola frase</li>
+            <li>La lógica oculta que el bucle protege</li>
+            <li>La inversión que lo desestabiliza</li>
+            <li>Su lugar en tu mapa personal</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE METHOD (arc) ═══ -->
+  <section id="method">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">El método</span>
+        <h2>Una secuencia estricta, <span class="grad italic">hasta el fondo</span></h2>
+        <p>Fractalogie nunca salta ni mezcla pasos. Sigue un bucle a través de cinco movimientos — desde sus cuatro esquinas hasta la identidad que lo mantiene en su sitio.</p>
+      </div>
+      <div class="arc">
+        <div class="arc-row reveal"><div class="n">01</div><div><h3>El cuadrante fractal</h3><p>Detonante, reacción, emoción, precio — las cuatro esquinas del bucle, sacadas a la luz con tus propias palabras y no impuestas desde fuera.</p></div></div>
+        <div class="arc-row reveal"><div class="n">02</div><div><h3>La lógica oculta</h3><p>De qué te protege el patrón en silencio, y el riesgo emocional que te ha estado ayudando a evitar todo este tiempo.</p></div></div>
+        <div class="arc-row reveal"><div class="n">03</div><div><h3>La inversión</h3><p>«No es el miedo lo que te protege del fracaso — es el fracaso lo que te protege de ser visto.» La frase que da la vuelta al bucle del revés.</p></div></div>
+        <div class="arc-row reveal"><div class="n">04</div><div><h3>El zoom fractal</h3><p>La misma estructura, hallada de nuevo en otro ámbito. No son muchos problemas separados — uno solo, que se repite, a otra escala.</p></div></div>
+        <div class="arc-row reveal"><div class="n">05</div><div><h3>La identidad atractora</h3><p>«Soy alguien que ___.» La autodefinición que todo el bucle se ha organizado, todo este tiempo, para proteger.</p></div></div>
+      </div>
+      <div class="center" style="margin-top:34px;"><a class="btn btn-ghost reveal" href="philosophy.html">Lee la filosofía →</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ REASSURANCE ═══ -->
+  <section id="reassurance">
+    <div class="wrap">
+      <div class="disclaimer reveal">
+        <span class="eyebrow">Silencioso por diseño</span>
+        <h2>Solo texto. Sin cámara. <span class="grad italic">Sin ruido.</span></h2>
+        <p>Fractalogie lee palabras, no rostros — no hay cámara, ni micrófono, ni rastreo, ni cuenta requerida para empezar. Tu primer escaneo arranca en cuanto tú lo haces.</p>
+        <p>Inicia sesión solo si quieres que tu mapa se sincronice entre dispositivos. En cualquier caso, no vendemos nada ni usamos rastreadores, y puedes borrarlo todo con un solo toque.</p>
+        <p class="fine">Fractalogie es una herramienta de autorreflexión. Sus resultados son reflexiones interpretativas, no hechos, diagnósticos ni consejo médico, psicológico o profesional — y no sustituyen a un profesional cualificado. Si estás pasando por un momento de angustia, contacta con un profesional o con el número de emergencias de tu zona.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BAND ═══ -->
+  <section id="get">
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Muy pronto · iOS</span>
+        <h2>Sigue un solo hilo <span class="grad italic">hasta el fondo</span></h2>
+        <p>Tu primer escaneo es gratis — sin cuenta, sin rastreo, sin ruido. Mira cómo una única situación recurrente revela la estructura que hay debajo.</p>
+        <a class="btn btn-ghost" href="pricing.html" style="margin-bottom:30px;">Ver precios →</a>
+        <div class="badges" style="justify-content:center;">
+          <span class="store dim">
+            <span class="soon">Pronto</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Muy pronto en la</small><b>App Store</b></span>
+          </span>
+          <span class="store dim">
+            <span class="soon">Pronto</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>En construcción para</small><b>Google Play</b></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">Un espejo guiado por IA para los patrones que organizan tu vida en silencio.</p>
+        </div>
+        <div class="fcol">
+          <h4>Producto</h4>
+          <a href="how-it-works.html">Cómo funciona</a>
+          <a href="features.html">Funciones</a>
+          <a href="philosophy.html">Filosofía</a>
+          <a href="pricing.html">Precios</a>
+        </div>
+        <div class="fcol">
+          <h4>Legal</h4>
+          <a href="privacy.html">Política de Privacidad</a>
+          <a href="terms.html">Términos de Uso</a>
+          <a href="support.html">Soporte</a>
+        </div>
+        <div class="fcol">
+          <h4>Contacto</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="support.html">Ayuda y FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. Todos los derechos reservados.</span>
+        <span>Hecho con cuidado · iOS — Android pronto</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js" defer></script>
+</body>
+</html>

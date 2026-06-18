@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04050c" />
+
+  <title>Fonctionnalités — Fractalogie</title>
+  <meta name="description" content="À l'intérieur de Fractalogie : un scan IA guidé qui pose une question à la fois, une seule révélation claire par scan, ta carte fractale, une image évolutive de qui tu deviens, et une reconstruction privée en 1:1. Texte uniquement, aucun traceur, aucun compte requis." />
+  <meta name="keywords" content="application d'introspection, journal IA, schémas récurrents, introspection, développement personnel, fractalogie, schémas d'identité, pleine conscience" />
+  <link rel="canonical" href="https://fractalogie.ai/fr/features" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fractalogie.ai/fr/features" />
+  <meta property="og:title" content="Fonctionnalités — Fractalogie" />
+  <meta property="og:description" content="Un scan IA guidé, une révélation claire, ta carte fractale, et une image évolutive de qui tu deviens. Texte uniquement · aucun traceur · aucun compte requis." />
+  <meta property="og:image" content="https://fractalogie.ai/shots/03-insights.jpg" />
+  <meta property="og:site_name" content="Fractalogie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fonctionnalités — Fractalogie" />
+  <meta name="twitter:description" content="Un scan IA guidé, une révélation claire, ta carte fractale, et une image évolutive de qui tu deviens." />
+  <meta name="twitter:image" content="https://fractalogie.ai/shots/03-insights.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ── Features page — alternating editorial rows ─────────────────────── */
+    .frow { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(40px, 6vw, 88px); align-items: center; padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
+    .frow:first-of-type { border-top: 0; }
+    .frow .frow-media { display: flex; justify-content: center; position: relative; }
+    .frow.alt .frow-media { order: 2; }
+    .frow .frow-body { max-width: 50ch; }
+    .frow .frow-body .ix { font-family: var(--fs-mono); font-size: 12px; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; }
+    .frow .frow-body h2 { font-size: clamp(28px, 4vw, 44px); margin: 16px 0 18px; }
+    .frow .frow-body p { color: var(--ink-60); font-size: 17.5px; margin-bottom: 14px; }
+    .frow .frow-body p.lead { color: var(--ink-80); font-size: 19px; }
+    .frow .frow-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .frow .frow-tags span { font-family: var(--fs-mono); font-size: 11px; letter-spacing: 0.05em; color: var(--ink-80); padding: 7px 13px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); }
+    .frow .frow-tags span b { color: var(--gold); font-weight: 400; }
+    .frow .device { width: min(300px, 72vw); }
+
+    @media (max-width: 860px) {
+      .frow { grid-template-columns: 1fr; gap: 44px; text-align: center; padding: 64px 0; }
+      .frow.alt .frow-media { order: 0; }
+      .frow .frow-body { max-width: none; margin: 0 auto; }
+      .frow .frow-tags { justify-content: center; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fractalogie","description":"Une application d'introspection guidée par l'IA qui fait surgir la boucle récurrente qui organise ta vie.","url":"https://fractalogie.ai","applicationCategory":"LifestyleApplication","operatingSystem":"iOS","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":["en","fr","es","de"]}
+  </script>
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="grain"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+      <div class="nav-links">
+        <a href="how-it-works.html">Comment ça marche</a>
+        <a href="features.html">Fonctionnalités</a>
+        <a href="philosophy.html">Philosophie</a>
+        <a href="pricing.html">Tarifs</a>
+        <details class="lang">
+          <summary>FR ▾</summary>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="index.html">Français</a></li>
+            <li><a href="../es/index.html">Español</a></li>
+            <li><a href="../de/index.html">Deutsch</a></li>
+          </ul>
+        </details>
+        <a class="nav-cta" href="#get">Obtenir l'app</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ INTRO ═══ -->
+  <section style="padding-bottom:40px;">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Fonctionnalités</span>
+        <h2>Tout est conçu pour révéler <span class="grad">une seule chose</span></h2>
+        <p>Pas un fil, pas une liste de fonctions à gérer. Chaque partie de Fractalogie pointe dans la même direction — vers l'unique boucle qui dirige discrètement ta vie, et la structure en dessous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURE ROWS ═══ -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+
+      <!-- 01 — Guided scan -->
+      <div class="frow reveal">
+        <div class="frow-media">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/02-scan.jpg" alt="Le scan guidé — une conversation IA en direct" loading="lazy" />
+          </div>
+        </div>
+        <div class="frow-body">
+          <span class="ix">01 — Le scan</span>
+          <h2>Le scan <span class="grad italic">guidé</span></h2>
+          <p class="lead">Une conversation calme et en direct avec un miroir qui pose une question déstabilisante à la fois.</p>
+          <p>Pas de déluge d'invites. Pas de conseil. Pas de questionnaire à vingt champs. Juste un fil précis, suivi jusqu'au bout — jusqu'à ce que le déclencheur, ta réaction, l'émotion qu'elle protège et le prix que tu continues de payer se mettent au point d'eux-mêmes.</p>
+          <div class="frow-tags">
+            <span><b>◆</b> déclencheur</span>
+            <span><b>◆</b> réaction</span>
+            <span><b>◆</b> émotion</span>
+            <span><b>◆</b> le prix</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — One revelation -->
+      <div class="frow alt reveal">
+        <div class="frow-media">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/03-insights.jpg" alt="Une révélation claire — le Miroir" loading="lazy" />
+          </div>
+        </div>
+        <div class="frow-body">
+          <span class="ix">02 — Le Miroir</span>
+          <h2>Une <span class="grad italic">révélation</span> claire</h2>
+          <p class="lead">Chaque scan renvoie une seule révélation nette — pas un fil à faire défiler.</p>
+          <p>Le Miroir nomme une répétition que tu n'avais pas mise en mots. Une phrase qui contient la boucle : <em>« Quand ___, je ___, parce que je ressens ___, et ça mène à ___. »</em> Tu ne repars pas avec des devoirs. Tu repars en voyant quelque chose que tu ne peux plus ne pas voir.</p>
+          <div class="frow-tags">
+            <span><b>✦</b> une révélation par scan</span>
+            <span><b>✦</b> pas de fil infini</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Fractal map -->
+      <div class="frow reveal">
+        <div class="frow-media">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/04-map.jpg" alt="Ta carte fractale — chaque boucle remonte à un seul attracteur" loading="lazy" />
+          </div>
+        </div>
+        <div class="frow-body">
+          <span class="ix">03 — La carte</span>
+          <h2>Ta <span class="grad italic">carte</span> fractale</h2>
+          <p class="lead">Chaque boucle que tu décodes remonte à un seul attracteur principal.</p>
+          <p>Relations, argent, travail, le corps — ils ressemblent à des problèmes distincts, mais la carte montre qu'ils suivent la même structure. Pas plusieurs problèmes. Un seul, qui se répète, à différentes échelles. Voir leur lien, c'est là où l'image cesse d'être abstraite.</p>
+          <div class="frow-tags">
+            <span><b>⟡</b> relations</span>
+            <span><b>⟡</b> argent</span>
+            <span><b>⟡</b> travail</span>
+            <span><b>⟡</b> corps</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — Evolution -->
+      <div class="frow alt reveal">
+        <div class="frow-media">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/05-evolution.jpg" alt="L'architecture de qui tu deviens" loading="lazy" />
+          </div>
+        </div>
+        <div class="frow-body">
+          <span class="ix">04 — Évolution</span>
+          <h2>L'architecture de qui tu <span class="grad-v italic">deviens</span></h2>
+          <p class="lead">Les motifs sauvegardés bâtissent une image vivante et évolutive de ta structure au fil du temps.</p>
+          <p>Chaque révélation que tu gardes ajoute un trait au dessin. Après des mois, tu ne regardes pas des notes éparses — tu regardes la forme de toi-même, comment elle se déplace, où elle se desserre. L'architecture n'est pas figée. Elle devient, et tu peux la regarder devenir.</p>
+          <div class="frow-tags">
+            <span><b>∞</b> motifs sauvegardés</span>
+            <span><b>∞</b> évolution au fil du temps</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — Reconstruction -->
+      <div class="frow reveal">
+        <div class="frow-media">
+          <div class="device">
+            <div class="device-glow"></div>
+            <img src="shots/06-reconstruction.jpg" alt="Au-delà de l'app — la reconstruction privée en 1:1" loading="lazy" />
+          </div>
+        </div>
+        <div class="frow-body">
+          <span class="ix">05 — Au-delà de l'app</span>
+          <h2>Au-delà de l'<span class="grad italic">app</span></h2>
+          <p class="lead">Quand voir ne suffit plus, une reconstruction privée en 1:1 réorganise l'identité qui génère la boucle.</p>
+          <p>L'app révèle la structure. La reconstruction est là où elle se rebâtit — à la racine, dans une séance privée avec un être humain réel. Pour les boucles qui se répètent même après que tu les aies nommées, et que tu es prêt·e à changer l'auto-définition qui les maintient en place.</p>
+          <div class="frow-tags">
+            <span><b>◇</b> 1:1 privé</span>
+            <span><b>◇</b> à la racine</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ QUIET GUARANTEES ═══ -->
+  <section>
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="eyebrow">Par conception</span>
+        <h2>Garanties <span class="grad">discrètes</span></h2>
+        <p>Ce que nous avons choisi de ne pas construire fait partie du produit. Pas de caméra, pas de pub, pas de courtiers en données — juste un miroir en qui tu peux avoir confiance.</p>
+      </div>
+      <div class="features">
+        <div class="feature reveal"><div class="ic">⌨</div><h3>Texte uniquement</h3><p>Pas de caméra, pas de photos, pas de micro. Fractalogie ne lit que ce que tu choisis d'écrire.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⌖</div><h3>Pas de traceurs, pas de pub</h3><p>Pas de SDK d'analytique, pas de réseaux publicitaires, pas de courtiers en données. Rien ne te suit hors de l'app.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">◷</div><h3>Fonctionne sans compte</h3><p>L'expérience principale tourne sans connexion. Un compte ajoute seulement une synchronisation cloud facultative.</p></div>
+        <div class="feature reveal"><div class="ic">⌫</div><h3>Suppression d'un seul geste</h3><p>Efface ton compte et chaque donnée cloud instantanément, depuis l'app.</p></div>
+        <div class="feature reveal" data-d="1"><div class="ic">⟡</div><h3>EN · FR · ES · DE</h3><p>L'interface et chaque analyse suivent la langue que tu choisis — anglais, français, espagnol, allemand.</p></div>
+        <div class="feature reveal" data-d="2"><div class="ic">⊘</div><h3>N'entraîne jamais de modèles d'IA</h3><p>Tes mots servent à générer ton analyse — jamais à entraîner des modèles, ni les nôtres ni ceux de quiconque.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA BAND ═══ -->
+  <section id="get">
+    <div class="wrap">
+      <div class="band reveal">
+        <span class="eyebrow">Bientôt disponible</span>
+        <h2>Vois le <span class="grad italic">schéma</span> sous ta vie</h2>
+        <p>Ton premier scan est gratuit — aucun compte, aucun pistage, aucun bruit. L'Accès Fondateur déverrouille l'expérience complète.</p>
+        <div style="margin-bottom:30px;"><a class="btn btn-ghost" href="pricing.html">Voir les tarifs →</a></div>
+        <div class="badges" style="justify-content:center;">
+          <span class="store dim">
+            <span class="soon">Bientôt</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.32.86 1.24 1.89 2.64 3.23 2.59 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.03 2.29-1.27 3.15-2.51.99-1.44 1.4-2.83 1.42-2.9-.03-.01-2.72-1.04-2.75-4.13M14.6 4.5c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+            <span class="st"><small>Bientôt sur l'</small><b>App Store</b></span>
+          </span>
+          <span class="store dim">
+            <span class="soon">Bientôt</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19l16-9.5z"/></svg>
+            <span class="st"><small>En construction pour</small><b>Google Play</b></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div style="max-width:320px;">
+          <a class="brand" href="index.html"><img src="../logo-mark.png" alt="Fractalogie" /> Fractalogie</a>
+          <p class="tg">Un miroir guidé par l'IA pour les schémas qui organisent discrètement ta vie.</p>
+        </div>
+        <div class="fcol">
+          <h4>Produit</h4>
+          <a href="how-it-works.html">Comment ça marche</a>
+          <a href="features.html">Fonctionnalités</a>
+          <a href="philosophy.html">Philosophie</a>
+          <a href="pricing.html">Tarifs</a>
+        </div>
+        <div class="fcol">
+          <h4>Légal</h4>
+          <a href="privacy.html">Politique de confidentialité</a>
+          <a href="terms.html">Conditions d'utilisation</a>
+          <a href="support.html">Assistance</a>
+        </div>
+        <div class="fcol">
+          <h4>Contact</h4>
+          <a href="mailto:contact@fractalogie.ai">contact@fractalogie.ai</a>
+          <a href="support.html">Aide &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Fractalogie. Tous droits réservés.</span>
+        <span>Conçu avec soin · iOS — Android bientôt</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js" defer></script>
+</body>
+</html>
